@@ -10,7 +10,7 @@ module.exports = {
 	plugins: ["react-refresh"],
 	rules: {
 		"react-refresh/only-export-components": "warn",
-		"linebreak-style": ["error", "unix"],
+		"linebreak-style": ["error", "windows"],
 		"no-return-assign": "off",
 		semi: ["off", "never"],
 		quotes: ["warn", "double"],
@@ -52,3 +52,4 @@ module.exports = {
 		"react/jsx-filename-extension": "off",
 	},
 }
+

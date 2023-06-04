@@ -1,25 +1,25 @@
 {
-  "tabWidth": 2,
-  "useTabs": true,
+	"tabWidth": 2,
+	"useTabs": true,
 
-  "semi": false,
-  "singleQuote": false,
-  "endOfLine": "lf",
-  "trailingComma": "all",
-  "printWidth": 100,
-  "arrowParens": "avoid",
-  "importOrder": [
-    "<THIRD_PARTY_MODULES>",
-    "^@/app/(.*)$",
-    "^@/views/(.*)$",
-    "^@/widgets/(.*)$",
-    "^@/features/(.*)$",
-    "^@/entities/(.*)$",
-    "^@/shared/(.*)$",
-    "^../(.*)",
-    "^./(.*)",
-    "^(.scss)$"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+	"semi": false,
+	"singleQuote": false,
+	"endOfLine": "crlf",
+	"trailingComma": "all",
+	"printWidth": 100,
+	"arrowParens": "avoid",
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@/app/(.*)$",
+		"^@/views/(.*)$",
+		"^@/widgets/(.*)$",
+		"^@/features/(.*)$",
+		"^@/entities/(.*)$",
+		"^@/shared/(.*)$",
+		"^../(.*)",
+		"^./(.*)",
+		"^(.scss)$"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
 }
