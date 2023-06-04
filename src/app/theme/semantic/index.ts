@@ -1,0 +1,30 @@
+export const semanticTokens = {
+	colors: {
+		primary: {
+			50: { default: "#4483F7", _dark: "#973FCF" },
+			100: { default: "#4483F7", _dark: "#973FCF" },
+			200: { default: "#4483F7", _dark: "#973FCF" },
+			300: { default: "#4483F7", _dark: "#973FCF" },
+			400: { default: "#4483F7", _dark: "#973FCF" },
+			500: { default: "#4483F7", _dark: "#973FCF" },
+			600: { default: "#4483F7", _dark: "#973FCF" },
+			700: { default: "#4483F7", _dark: "#973FCF" },
+			800: { default: "#4483F7", _dark: "#973FCF" },
+			900: { default: "#4483F7", _dark: "#973FCF" },
+		},
+		primaryText: { default: "#ffffff", _dark: "#ffffff" },
+		secondary: {
+			50: { default: "#973FCF", _dark: "#973FCF" },
+			100: { default: "#973FCF", _dark: "#973FCF" },
+			200: { default: "#973FCF", _dark: "#973FCF" },
+			300: { default: "#973FCF", _dark: "#973FCF" },
+			400: { default: "#973FCF", _dark: "#973FCF" },
+			500: { default: "#973FCF", _dark: "#973FCF" },
+			600: { default: "#973FCF", _dark: "#973FCF" },
+			700: { default: "#973FCF", _dark: "#973FCF" },
+			800: { default: "#973FCF", _dark: "#973FCF" },
+			900: { default: "#973FCF", _dark: "#973FCF" },
+		},
+		secondaryText: { default: "#ffffff", _dark: "#ffffff" },
+	},
+}
