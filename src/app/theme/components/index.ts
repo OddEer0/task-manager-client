@@ -1,3 +1,4 @@
+import { ChakraAvatar } from "./Avatar"
 import { ChakraButton } from "./Button"
 import { ChakraContainer } from "./Container"
 import { ChakraInput } from "./Input"
@@ -10,4 +11,5 @@ export const components = {
 	Progress: ChakraProgress,
 	Switch: ChakraSwitch,
 	Input: ChakraInput,
+	Avatar: ChakraAvatar,
 }

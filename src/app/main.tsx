@@ -1,10 +1,14 @@
+import "normalize.css"
 import ReactDOM from "react-dom/client"
+import { RouterProvider } from "react-router-dom"
 
-import { App } from "./App.tsx"
-import { AppProvider } from "./providers/index.tsx"
+import "@/app/styles/index.scss"
+
+import { AppProvider } from "./providers"
+import { router } from "./router"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<AppProvider>
-		<App />
+		<RouterProvider router={router} />
 	</AppProvider>,
 )
