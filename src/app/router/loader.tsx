@@ -1,6 +1,12 @@
-import { GQL_REFRESH } from "@/shared/api"
+import { useProfileStore } from "@/entities/User"
+
+import { GQL_REFRESH, IUser, userGqlMapper } from "@/shared/api"
 
 import { apolloClient } from "../apollo/client"
+
+export interface IMainLoader {
+	user: IUser | null
+}
 
 export const mainLoader = async () => {
 	const isAuth = localStorage.getItem("isAuth")
@@ -17,7 +23,11 @@ export const mainLoader = async () => {
 		query: GQL_REFRESH,
 	})
 
+	const newUser = userGqlMapper({ user })
+
+	useProfileStore.setState({ profile: newUser })
+
 	return {
-		user,
+		user: newUser,
 	}
 }

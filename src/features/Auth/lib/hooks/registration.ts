@@ -3,9 +3,8 @@ import { useForm } from "react-hook-form"
 
 import { profileEventSelector, useProfileStore } from "@/entities/User"
 
-import { GQL_REGISTRATION } from "@/shared/api"
+import { GQL_REGISTRATION, userGqlMapper } from "@/shared/api"
 
-import { userDataMapToStore } from "../helpers"
 import { IRegistrationData } from "../types"
 
 export const useUserRegistration = () => {
@@ -13,7 +12,7 @@ export const useUserRegistration = () => {
 	const { setProfile } = useProfileStore(profileEventSelector)
 	const [mutate] = useMutation(GQL_REGISTRATION, {
 		onCompleted(data) {
-			setProfile(userDataMapToStore(data))
+			setProfile(userGqlMapper(data))
 		},
 	})
 

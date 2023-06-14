@@ -1,10 +1,14 @@
 import { FC } from "react"
-import { Outlet, useLoaderData } from "react-router-dom"
+import { Navigate, Outlet, useLoaderData } from "react-router-dom"
+
+import { IMainLoader } from "./loader"
 
 const MainLayout: FC = () => {
-	const data = useLoaderData()
+	const data = useLoaderData() as IMainLoader
 
-	console.log(data)
+	if (!data.user) {
+		return <Navigate to="/auth/login" replace={true} />
+	}
 
 	return <Outlet />
 }
