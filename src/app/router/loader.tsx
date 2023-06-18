@@ -1,6 +1,6 @@
 import { addProfileEvent } from "@/entities/User"
 
-import { GQL_REFRESH, IUser, registrationMapper } from "@/shared/api"
+import { GQL_REFRESH, IUser } from "@/shared/api"
 
 import { apolloClient } from "../apollo/client"
 
@@ -23,11 +23,9 @@ export const mainLoader = async () => {
 		query: GQL_REFRESH,
 	})
 
-	const newUser = registrationMapper({ user })
-
-	addProfileEvent(newUser)
+	addProfileEvent(user)
 
 	return {
-		user: newUser,
+		user,
 	}
 }
