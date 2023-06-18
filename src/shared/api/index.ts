@@ -1,3 +1,3 @@
 export * from "./types"
 export * from "./gql"
-export * from "./mappers"
+export * from "./mapper"

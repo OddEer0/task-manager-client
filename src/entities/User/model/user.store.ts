@@ -1,15 +1,5 @@
-import { createStore } from "@/shared/package/zustand"
+import { createStore } from "effector"
 
-import { IUserStore } from "./user.types"
+import { IUser } from "@/shared/api"
 
-export const useProfileStore = createStore<IUserStore>(set => ({
-	profile: null,
-	setProfile: user => {
-		localStorage.setItem("isAuth", "true")
-		set({ profile: user })
-	},
-	removeProfile: () => {
-		localStorage.removeItem("isAuth")
-		set({ profile: null })
-	},
-}))
+export const $profile = createStore<IUser | null>(null)

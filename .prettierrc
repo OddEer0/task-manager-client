@@ -6,7 +6,7 @@
 	"singleQuote": false,
 	"endOfLine": "crlf",
 	"trailingComma": "all",
-	"printWidth": 100,
+	"printWidth": 90,
 	"arrowParens": "avoid",
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",

@@ -2,8 +2,9 @@ export interface IUser {
 	id: string
 	firstName: string
 	lastName: string
+	fullName: string
 	email: string
-	gender?: string | null
-	avatar?: string | null
-	age?: number | null
+	avatar: string | null | undefined
+	gender: string | null | undefined
+	age: number | null | undefined
 }

@@ -4,7 +4,12 @@ import * as path from "path"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react({
+			jsxImportSource: "@emotion/react",
+			tsDecorators: true,
+		}),
+	],
 	resolve: {
 		alias: {
 			"@": path.resolve(__dirname, "./src/"),
@@ -26,4 +31,3 @@ export default defineConfig({
 		},
 	},
 })
-
