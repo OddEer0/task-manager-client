@@ -1,3 +1,1 @@
-import { UserRegistrationMutation } from "../typing/graphql.ts"
-
-export type IUser = UserRegistrationMutation["user"]
+export type IUser = string
