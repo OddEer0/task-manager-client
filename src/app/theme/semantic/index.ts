@@ -1,16 +1,16 @@
 export const semanticTokens = {
 	colors: {
 		primary: {
-			50: { default: "#4483F7", _dark: "#973FCF" },
-			100: { default: "#4483F7", _dark: "#973FCF" },
-			200: { default: "#4483F7", _dark: "#973FCF" },
-			300: { default: "#4483F7", _dark: "#973FCF" },
+			50: { default: "#6197fb", _dark: "#973FCF" },
+			100: { default: "#568ffa", _dark: "#973FCF" },
+			200: { default: "#4d88f6", _dark: "#973FCF" },
+			300: { default: "#4382f4", _dark: "#973FCF" },
 			400: { default: "#4483F7", _dark: "#973FCF" },
-			500: { default: "#4483F7", _dark: "#973FCF" },
-			600: { default: "#4483F7", _dark: "#973FCF" },
-			700: { default: "#4483F7", _dark: "#973FCF" },
-			800: { default: "#4483F7", _dark: "#973FCF" },
-			900: { default: "#4483F7", _dark: "#973FCF" },
+			500: { default: "#3d7bef", _dark: "#973FCF" },
+			600: { default: "#3775e8", _dark: "#973FCF" },
+			700: { default: "#3272e6", _dark: "#973FCF" },
+			800: { default: "#2e6cdc", _dark: "#973FCF" },
+			900: { default: "#2865d3", _dark: "#973FCF" },
 		},
 		primaryText: { default: "#ffffff", _dark: "#ffffff" },
 		secondary: {

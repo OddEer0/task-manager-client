@@ -4,6 +4,7 @@ interface LayoutProviderType {
 	isOpen: boolean
 	openHandler: () => void
 	closeHandler: () => void
+	toggleHandler: () => void
 }
 
 export const LayoutContext = createContext<LayoutProviderType>({
@@ -12,6 +13,9 @@ export const LayoutContext = createContext<LayoutProviderType>({
 		return null
 	},
 	closeHandler() {
+		return null
+	},
+	toggleHandler() {
 		return null
 	},
 })
@@ -38,8 +42,12 @@ export const LayoutProvider: FC<PropsWithChildren<LayoutProviderProps>> = ({
 		closeHandle()
 	}
 
+	const toggleHandler = () => {
+		isOpen ? closeHandler() : openHandler()
+	}
+
 	return (
-		<LayoutContext.Provider value={{ isOpen, openHandler, closeHandler }}>
+		<LayoutContext.Provider value={{ isOpen, openHandler, closeHandler, toggleHandler }}>
 			{children}
 		</LayoutContext.Provider>
 	)

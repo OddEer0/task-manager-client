@@ -4,10 +4,6 @@
 	position: relative;
 }
 
-.aside {
-	position: sticky;
-	top: 0;
-	height: 100vh;
-	background: orange;
-	width: 50px;
+.wrapper {
+	flex:1;
 }

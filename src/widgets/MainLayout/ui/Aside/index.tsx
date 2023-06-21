@@ -1,25 +1,25 @@
-import { HTMLMotionProps } from "framer-motion"
-import { motion } from "framer-motion"
-import { FC, useContext } from "react"
+import { HTMLMotionProps, MotionValue, motion } from "framer-motion"
+import { FC } from "react"
 
-import { LayoutContext } from "@/widgets/MainLayout/ui/Layout/layout.provider.tsx"
+import { NavList } from "../NavList"
+import { ToggleAsideButton } from "../ToggleAsideButton"
 
 import styles from "./styles.module.scss"
 
-type MainAsideProps = HTMLMotionProps<"div">
+interface MainAsideProps extends HTMLMotionProps<"div"> {
+	motionValue: MotionValue<number>
+}
 
-export const MainAside: FC<MainAsideProps> = (...props) => {
-	const { isOpen, openHandler, closeHandler } = useContext(LayoutContext)
-
-	const toggleHandle = () => {
-		isOpen ? closeHandler() : openHandler()
-	}
-
+export const MainAside: FC<MainAsideProps> = ({ motionValue, ...props }) => {
 	return (
-		<motion.aside className={styles.aside} {...props}>
-			<div className="" onClick={toggleHandle}>
-				B
+		<motion.aside layout layoutRoot {...props} className={styles.aside}>
+			<div className={styles.head}>
+				<ToggleAsideButton />
 			</div>
+			<div className={styles.body}>
+				<NavList />
+			</div>
+			<div className={styles.footer}></div>
 		</motion.aside>
 	)
 }

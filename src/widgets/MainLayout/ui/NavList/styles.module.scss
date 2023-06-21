@@ -1,0 +1,44 @@
+.nav {
+
+}
+
+.list {
+	@include flex-col(flex-start, flex-start);
+	gap: 15px;
+}
+
+.item {
+	position: relative;
+	margin-left: -6px;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 12px;
+	@include flex(flex-start);
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		background: var(--chakra-colors-bg-200);
+	}
+}
+
+.icon {
+	font-size: 26px;
+}
+
+.text {
+	display: inline-block;
+	flex: 1;
+	font-size: 16px;
+	min-width: 310px;
+	text-align: center;
+}
+
+.thumb {
+	position: absolute;
+	border-radius: 5px;
+	top: 0;
+	left: -6px;
+	height: 100%;
+	width: 4px;
+	background: var(--chakra-colors-primary-400);
+}

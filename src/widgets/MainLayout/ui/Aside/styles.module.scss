@@ -2,6 +2,24 @@
 	position: sticky;
 	top: 0;
 	height: 100vh;
-	background: orange;
 	width: 50px;
+	padding: 12px;
+	background: var(--chakra-colors-bg-50);
+	@include flex-col(space-between, flex-start);
+	overflow: hidden;
 }
+
+.head {
+	margin-bottom: 40px;
+}
+
+.body {
+	flex: 1;
+	width: 100%;
+	font-size: 26px;
+}
+
+.footer {
+
+}
+
