@@ -11,9 +11,9 @@ class StorageService {
 		}
 	}
 
-	getItem(key: string) {
+	getItem<T>(key: string) {
 		if (window) {
-			localStorage.getItem(key)
+			localStorage.getItem<T>(key)
 		}
 	}
 }
