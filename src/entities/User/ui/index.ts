@@ -1,1 +1,0 @@
-export { ProfileHead } from "./ProfileHead"
