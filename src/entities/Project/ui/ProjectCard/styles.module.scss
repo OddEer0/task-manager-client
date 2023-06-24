@@ -1,0 +1,45 @@
+.card {
+	width: 260px;
+	overflow: hidden;
+	height: 130px;
+	cursor: pointer;
+	transition: transform .3s ease-in-out;
+
+	&:hover {
+		transform: rotate(2deg);
+	}
+}
+
+.title {
+	flex: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.header {
+	height: 70px;
+	width: 260px;
+	@include flex;
+	gap: 10px;
+}
+
+.body {
+	width: 260px;
+	@include flex;
+}
+
+.setting {
+	cursor: default;
+	padding: 5px;
+	border-radius: 12px;
+	transition: background .3s ease-in-out;
+
+	&:hover {
+		background: var(--chakra-colors-gray-200);
+	}
+}
+
+.icon {
+	 font-size: 28px;
+ }

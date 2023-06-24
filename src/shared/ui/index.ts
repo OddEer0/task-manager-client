@@ -43,6 +43,11 @@ export {
 	ModalFooter,
 	ModalBody,
 	ModalCloseButton,
+	Card,
+	CardHeader,
+	CardBody,
+	CardFooter,
+	Text,
 } from "@chakra-ui/react"
 
 export * from "./data-display"

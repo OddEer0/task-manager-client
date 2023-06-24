@@ -33,12 +33,20 @@ describe("test classname helpers", () => {
 		})
 		expect(classes).toBe("flat-first first")
 
-		classes = classname("first", { second: true, third: false }, "four", { fife: true, six: false })
+		classes = classname("first", { second: true, third: false }, "four", {
+			fife: true,
+			six: false,
+		})
 		expect(classes).toBe("first second four fife")
 	})
 
 	it("null, undefined property", () => {
 		const classes = classname(null, undefined, false, "first")
 		expect(classes).toBe("first")
+	})
+
+	it("array property", () => {
+		const classes = classname("first", ["second", ["third", "four"], "fifth"])
+		expect(classes).toBe("first second third four fifth")
 	})
 })
