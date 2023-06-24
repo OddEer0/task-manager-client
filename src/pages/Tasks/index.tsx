@@ -1,6 +1,6 @@
 import { FC } from "react"
 
-import { ProjectCard } from "@/entities/Project"
+import { ProjectCard, ProjectCardList } from "@/entities/Project"
 
 export const TasksPage: FC = () => {
 	return (
@@ -14,6 +14,7 @@ export const TasksPage: FC = () => {
 					name: "Projectssssssssssssssssssssssssss",
 				}}
 			/>
+			<ProjectCardList />
 		</>
 	)
 }
