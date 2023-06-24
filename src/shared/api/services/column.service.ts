@@ -4,8 +4,9 @@ import { COLUMN_KEY } from "../constants.ts"
 import { Column, ColumnCreate, ColumnServer } from "../types"
 
 class ColumnService {
-	getColumnsByProjectId(id: string): Column[] {
+	getColumnsByProjectId(id: string): Column[] | null {
 		const columnsJson = localStorage.getItem(COLUMN_KEY)
+		if (!columnsJson) return null
 		const columnsParse = JSON.parse(columnsJson) as ColumnServer[]
 		const columns = columnsParse || []
 		const filteredColumns = columns.filter(col => col.projectId === id)
@@ -17,12 +18,13 @@ class ColumnService {
 			order,
 		}))
 	}
-	createColumn(projectId: string, columnData: ColumnCreate) {
+	createColumn(projectId: string, columnData: ColumnCreate): ColumnServer | null {
 		const columnsJson = localStorage.getItem(COLUMN_KEY)
+		if (!columnsJson) return null
 		const columnsParse = JSON.parse(columnsJson) as ColumnServer[]
 		const columns = columnsParse || []
 		const column: ColumnServer = { ...columnData, projectId, id: uuid.v4() }
-		localStorage.setItem(COLUMN_KEY, [...columns, column])
+		localStorage.setItem(COLUMN_KEY, JSON.stringify([...columns, column]))
 		return column
 	}
 }
