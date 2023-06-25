@@ -1,21 +1,18 @@
+import { useStore } from "effector-react"
 import { FC } from "react"
 
 import { Skeleton, Stack, Text } from "@/shared/ui"
 
-import { useProjectQuery } from "../../api"
+import { $projects } from "../../model"
 import { ProjectCard } from "../ProjectCard"
 
 export const ProjectCardList: FC = () => {
-	const { data, error, isLoading } = useProjectQuery("me")
-
-	if (error) {
-		return <Text>Error</Text>
-	}
+	const data = useStore($projects)
 
 	return !!data && !!data.length ? (
 		<Stack>
 			{data.map(project => (
-				<Skeleton isLoaded={isLoading}>
+				<Skeleton isLoaded={true} key={project.id}>
 					<ProjectCard project={project} />
 				</Skeleton>
 			))}
