@@ -1,3 +1,5 @@
-export const PROJECT_KEY = "projects"
-export const TASK_KEY = "tasks"
-export const COLUMN_KEY = "columns"
+const prefix = "effector"
+
+export const PROJECTS_KEY = prefix + " projects"
+
+export const TASK_KEY = prefix + " tasks"

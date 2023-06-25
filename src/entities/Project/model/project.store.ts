@@ -1,8 +1,8 @@
 import { createStore } from "effector"
 import { persist } from "effector-storage/local"
 
-import { Project } from "@/shared/api"
+import { PROJECTS_KEY, Project } from "@/shared/api"
 
 export const $projects = createStore<Project[]>([])
 
-persist({ store: $projects, key: "effector-project" })
+persist({ store: $projects, key: PROJECTS_KEY })
