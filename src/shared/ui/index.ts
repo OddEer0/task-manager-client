@@ -52,6 +52,7 @@ export {
 	FormLabel,
 	FormErrorMessage,
 	FormHelperText,
+	type ButtonProps,
 } from "@chakra-ui/react"
 
 export * from "./data-display"
