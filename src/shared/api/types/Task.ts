@@ -1,12 +1,15 @@
+import { PriorityVariant } from "./Priority"
 import { Tag } from "./Tag"
 
-export interface Task {
-	id: string
+export interface TaskCreate {
 	name: string
-	order: number
-	tags: Tag[]
+	columnId: string
 }
 
-export interface TaskServer extends Task {
-	columnId: string
+export interface Task extends TaskCreate {
+	id: string
+	order: number
+	description: string | null
+	priority: PriorityVariant | null
+	tags: Tag[]
 }
