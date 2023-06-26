@@ -1,3 +1,5 @@
 .section {
 	overflow: auto;
+	@include flex(flex-start, flex-start);
+	gap: 15px;
 }

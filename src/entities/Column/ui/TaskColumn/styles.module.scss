@@ -1,0 +1,13 @@
+.column {
+	border-radius: 15px;
+	@include flex-col;
+	width: 320px;
+}
+
+.head {
+	border-radius: 15px 15px 0 0;
+}
+
+.body {
+	flex: 1;
+}

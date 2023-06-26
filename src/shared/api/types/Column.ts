@@ -2,13 +2,12 @@ export interface ColumnCreate {
 	name: string
 	bg: string
 	color: string
-	order: number
+	projectId: string
 }
 
 export interface Column extends ColumnCreate {
+	order: number
 	id: string
 }
 
-export interface ColumnServer extends Column {
-	projectId: string
-}
+export type ColumnServer = Column
