@@ -26,8 +26,6 @@ export const CreateProjectForm: FC = () => {
 		$projectsApi.addProject(data)
 	})
 
-	console.log(errors)
-
 	return (
 		<form className={styles.form} onSubmit={submitHandle}>
 			<FormControl>
