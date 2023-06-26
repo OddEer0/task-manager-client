@@ -23,7 +23,7 @@ export const CreateColumnForm: FC<CreateColumnFormProps> = ({ projectId }) => {
 		control,
 		formState: { errors },
 	} = useForm<ICreateColumnForm>({
-		defaultValues: { bg: "#31beb2", color: "#ffffff" },
+		defaultValues: { bg: "#31beb2" },
 	})
 
 	const submitHandle = handleSubmit((data: ICreateColumnForm) => {
@@ -55,20 +55,6 @@ export const CreateColumnForm: FC<CreateColumnFormProps> = ({ projectId }) => {
 					)}
 					control={control}
 					name="bg"
-				/>
-			</FormControl>
-			<FormControl display="inline-block" width="auto">
-				<FormLabel>Цвет текста</FormLabel>
-				<Controller
-					render={({ field }) => (
-						<ColorPicker
-							color={field.value}
-							onChange={color => field.onChange(color.hexa)}
-							className={styles.picker}
-						/>
-					)}
-					control={control}
-					name="color"
 				/>
 			</FormControl>
 			<Button type="submit">SUBMIT</Button>

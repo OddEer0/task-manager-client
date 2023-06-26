@@ -21,12 +21,16 @@ export const TaskColumn: FC<TaskColumnProps> = ({
 	...props
 }) => {
 	const classes = classname(styles.column, className)
-	const { bg, color, name, task } = column
+	const { bg, name, task } = column
 
 	return (
 		<Box className={classes} {...props}>
-			<div className={styles.head} style={{ background: bg, color }}>
-				<Text>{name}</Text>
+			<div className={styles.head} style={{ borderColor: bg }}>
+				<div className={styles.headText}>
+					<span className={styles.circle} style={{ background: bg }} />
+					<Text className={styles.title}>{name}</Text>
+					<Text className={styles.count}></Text>
+				</div>
 				{Edit && Edit}
 			</div>
 			<div className={styles.body}>

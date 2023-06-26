@@ -3,7 +3,6 @@ import { Task } from "./Task.ts"
 export interface ColumnCreate {
 	name: string
 	bg: string
-	color: string
 	projectId: string
 }
 

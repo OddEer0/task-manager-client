@@ -4,15 +4,33 @@ $LIST_MARGIN: 20px;
 .column {
 	border-radius: 15px;
 	@include flex-col;
-	width: 320px;
+	width: 330px;
+	padding: 20px;
 }
 
 .head {
-	border-radius: 15px;
 	width: 100%;
 	height: $HEAD_HEIGHT;
 	padding: 0 15px;
 	@include flex;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+.headText {
+	@include flex;
+	margin-bottom: 20px;
+}
+
+.title {
+	font-weight: 700;
+	margin-right: 9px;
+}
+
+.circle {
+	@include square(10px);
+	border-radius: 50%;
+	margin-right: 8px;
 }
 
 .body {
