@@ -1,13 +1,13 @@
 import { FC } from "react"
 
-import { CreateProject } from "@/features/CreateProject"
+import { CreateProject, EditProjectIcon } from "@/features/ProjectAction"
 
 import { ProjectCardList } from "@/entities/Project"
 
 export const TasksPage: FC = () => {
 	return (
 		<>
-			<ProjectCardList />
+			<ProjectCardList edit={EditProjectIcon} />
 			<CreateProject />
 		</>
 	)

@@ -2,12 +2,6 @@
 	width: 260px;
 	overflow: hidden;
 	height: 130px;
-	cursor: pointer;
-	transition: transform .3s ease-in-out;
-
-	&:hover {
-		transform: rotate(2deg);
-	}
 }
 
 .title {
@@ -18,6 +12,7 @@
 }
 
 .header {
+	cursor: pointer;
 	height: 70px;
 	width: 260px;
 	@include flex;
@@ -31,13 +26,6 @@
 
 .setting {
 	cursor: default;
-	padding: 5px;
-	border-radius: 12px;
-	transition: background .3s ease-in-out;
-
-	&:hover {
-		background: var(--chakra-colors-gray-200);
-	}
 }
 
 .icon {

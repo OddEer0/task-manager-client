@@ -1,0 +1,10 @@
+.icon {
+	padding: 6px;
+	font-size: 26px;
+	border-radius: 10px;
+	cursor: pointer;
+
+	&:hover {
+		background: var(--chakra-colors-gray-600);
+	}
+}
