@@ -1,6 +1,4 @@
-import { FC, HTMLAttributes, ReactNode } from "react"
-
-import { TaskCardList } from "@/entities/Column/ui/TaskCardList"
+import { FC, HTMLAttributes, PropsWithChildren, ReactNode } from "react"
 
 import { Column } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
@@ -14,18 +12,19 @@ interface TaskColumnProps extends HTMLAttributes<HTMLDivElement> {
 	taskList?: ReactNode
 }
 
-export const TaskColumn: FC<TaskColumnProps> = ({
+export const TaskColumn: FC<PropsWithChildren<TaskColumnProps>> = ({
 	column,
 	edit: Edit,
 	className,
+	children,
 	...props
 }) => {
 	const classes = classname(styles.column, className)
-	const { bg, name, task } = column
+	const { bg, name } = column
 
 	return (
 		<Box className={classes} {...props}>
-			<div className={styles.head} style={{ borderColor: bg }}>
+			<div className={styles.head}>
 				<div className={styles.headText}>
 					<span className={styles.circle} style={{ background: bg }} />
 					<Text className={styles.title}>{name}</Text>
@@ -33,9 +32,8 @@ export const TaskColumn: FC<TaskColumnProps> = ({
 				</div>
 				{Edit && Edit}
 			</div>
-			<div className={styles.body}>
-				<TaskCardList tasks={task} />
-			</div>
+			<div className={styles.divider} style={{ background: bg }} />
+			<div className={styles.body}>{children}</div>
 		</Box>
 	)
 }

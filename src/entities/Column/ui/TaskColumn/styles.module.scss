@@ -5,21 +5,26 @@ $LIST_MARGIN: 20px;
 	border-radius: 15px;
 	@include flex-col;
 	width: 330px;
-	padding: 20px;
+	height: calc(100vh - $LIST_MARGIN);
+	background: var(--chakra-colors-bg-50);
 }
 
 .head {
 	width: 100%;
-	height: $HEAD_HEIGHT;
-	padding: 0 15px;
+	height: $HEAD_HEIGHT + 20px;
+	padding: 20px 35px;
 	@include flex;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
+	position: relative;
+}
+
+.divider {
+	padding: 0 20px;
+	width: calc(100% - 40px);
+	height: 3px;
 }
 
 .headText {
 	@include flex;
-	margin-bottom: 20px;
 }
 
 .title {
@@ -35,6 +40,9 @@ $LIST_MARGIN: 20px;
 
 .body {
 	flex: 1;
+	width: 100%;
 	height: calc(100vh - $HEAD_HEIGHT - $LIST_MARGIN);
 	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0 20px;
 }

@@ -2,4 +2,5 @@
 	overflow: auto;
 	@include flex(flex-start, flex-start);
 	gap: 15px;
+	padding: 0 8px;
 }

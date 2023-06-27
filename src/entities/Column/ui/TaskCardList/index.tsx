@@ -1,20 +1,26 @@
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 
 import { Task } from "@/shared/api"
-import { Stack } from "@/shared/ui"
+import { Stack, StackProps } from "@/shared/ui"
 
 import { TaskCard } from "../TaskCard"
 
-interface TaskCardListProps {
+interface TaskCardListProps extends StackProps {
 	tasks: Task[]
+	addTask: ReactNode
 }
 
-export const TaskCardList: FC<TaskCardListProps> = ({ tasks }) => {
+export const TaskCardList: FC<TaskCardListProps> = ({
+	tasks,
+	addTask: AddTask,
+	...props
+}) => {
 	return (
-		<Stack>
+		<Stack gap="25px" {...props}>
 			{tasks.map(task => (
 				<TaskCard task={task} />
 			))}
+			{AddTask}
 		</Stack>
 	)
 }

@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { Navigate, useParams } from "react-router-dom"
 
-import { CreateColumn } from "@/features/ColumnAction"
+import { CreateColumn, CreateTask } from "@/features/ColumnAction"
 
 import { TaskColumnList } from "@/entities/Column"
 
@@ -16,7 +16,7 @@ export const TasksSpacePage: FC = () => {
 
 	return (
 		<section className={styles.section}>
-			<TaskColumnList id={params.id} />
+			<TaskColumnList id={params.id} addTask={CreateTask} />
 			<CreateColumn projectId={params.id} />
 		</section>
 	)
