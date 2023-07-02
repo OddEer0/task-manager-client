@@ -13,3 +13,8 @@ export interface Task extends TaskCreate {
 	priority: PriorityVariant | null
 	tags: Tag[]
 }
+
+export interface TaskUpdate {
+	task: Partial<Omit<Task, "id" | "columnId">>
+	id: string
+}

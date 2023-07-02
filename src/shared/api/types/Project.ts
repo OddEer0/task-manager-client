@@ -4,11 +4,14 @@ export interface ProjectCreate {
 	bg: string
 }
 
-export type ProjectUpdate = ProjectCreate
-
 export interface Project extends ProjectCreate {
 	id: string
 	taskCount: number
+}
+
+export interface ProjectUpdate {
+	project: Partial<Omit<Project, "id">>
+	id: string
 }
 
 export interface ProjectServer extends Project {

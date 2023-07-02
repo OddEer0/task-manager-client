@@ -2,7 +2,7 @@ import { createApi } from "effector"
 
 import { uuid } from "@/shared/package/uuid"
 
-import { Task, TaskCreate } from "../../types"
+import { Task, TaskCreate, TaskUpdate } from "../../types"
 
 import { $tasks } from "./task.store"
 
@@ -20,7 +20,7 @@ export const $tasksApi = createApi($tasks, {
 		}
 		return [...state, newTask]
 	},
-	removeTask(state, payload: string) {
+	deleteTask(state, payload: string) {
 		const deletedTask = state.find(task => task.id === payload)
 		if (!deletedTask) return
 		const mappedTasks = state
@@ -28,5 +28,10 @@ export const $tasksApi = createApi($tasks, {
 			.map((task, i) => ({ ...task, order: i + 1 }))
 		const filteredTasks = state.filter(task => task.columnId !== deletedTask.columnId)
 		return [...filteredTasks, ...mappedTasks]
+	},
+	updateTask(state, payload: TaskUpdate) {
+		return state.map(task =>
+			task.id === payload.id ? { ...task, ...payload.task } : task,
+		)
 	},
 })

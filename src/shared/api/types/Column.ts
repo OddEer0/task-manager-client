@@ -9,4 +9,9 @@ export interface Column extends ColumnCreate {
 	id: string
 }
 
+export interface ColumnUpdate {
+	column: Partial<Omit<Column, "id" | "projectId">>
+	id: string
+}
+
 export type ColumnServer = Column
