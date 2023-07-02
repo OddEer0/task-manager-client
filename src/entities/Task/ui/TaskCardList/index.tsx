@@ -25,7 +25,7 @@ export const TaskCardList: FC<TaskCardListProps> = ({
 	return (
 		<Stack gap="25px" {...props}>
 			{tasks.map(task => (
-				<TaskCard task={task} />
+				<TaskCard task={task} key={task.id} />
 			))}
 			{AddTask}
 		</Stack>
