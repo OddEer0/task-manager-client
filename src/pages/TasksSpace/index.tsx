@@ -1,7 +1,8 @@
 import { FC } from "react"
 import { Navigate, useParams } from "react-router-dom"
 
-import { CreateColumn, CreateTask } from "@/features/ColumnAction"
+import { CreateColumn } from "@/features/ColumnAction"
+import { CreateTask } from "@/features/TaskAction"
 
 import { TaskColumnList } from "@/entities/Column"
 
