@@ -1,10 +1,10 @@
 import { useStore } from "effector-react"
 import { FC, HTMLAttributes } from "react"
 
+import { $projects } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
 import { Skeleton, Stack, Text } from "@/shared/ui"
 
-import { $projects } from "../../model"
 import { ProjectCard } from "../ProjectCard"
 
 import styles from "./styles.module.scss"

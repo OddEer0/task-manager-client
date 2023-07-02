@@ -3,8 +3,7 @@ import ColorPicker from "@uiw/react-color-chrome"
 import { FC } from "react"
 import { Controller, useForm } from "react-hook-form"
 
-import { $columnsApi } from "@/entities/Column"
-
+import { $columnsApi } from "@/shared/api"
 import { Button, FormControl, FormLabel, Input } from "@/shared/ui"
 
 import { MIN_LENGTH_MESSAGE, REQUIRED_MESSAGE } from "../../lib"

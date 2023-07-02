@@ -1,8 +1,7 @@
 import { FC, useState } from "react"
 import { useForm } from "react-hook-form"
 
-import { $columnsApi } from "@/entities/Column"
-
+import { $tasksApi } from "@/shared/api"
 import { TaskCreate } from "@/shared/api"
 import { Input, Text } from "@/shared/ui"
 
@@ -17,7 +16,7 @@ export const CreateTask: FC<CreateTaskProps> = ({ id }) => {
 	const [isShow, setIsShow] = useState(false)
 
 	const submitHandle = handleSubmit((data: TaskCreate) => {
-		$columnsApi.addTask(data)
+		$tasksApi.addTask(data)
 	})
 
 	return (

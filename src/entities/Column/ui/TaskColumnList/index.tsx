@@ -1,13 +1,14 @@
 import { useStoreMap } from "effector-react"
 import { FC, HTMLAttributes } from "react"
 
-import { TaskCardList } from "@/entities/Column/ui/TaskCardList"
-import { TaskColumn } from "@/entities/Column/ui/TaskColumn"
+// TODO - Реализовать по другому, нарушается архитектура
+import { TaskCardList } from "@/entities/Task"
 
+import { $columns, columnByProjectIdSelector } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
 import { Skeleton, Stack } from "@/shared/ui"
 
-import { $columns, columnByProjectIdSelector } from "../../model"
+import { TaskColumn } from "../TaskColumn"
 
 import styles from "./styles.module.scss"
 
@@ -37,7 +38,7 @@ export const TaskColumnList: FC<TaskColumnListProps> = ({
 						<TaskColumn column={col}>
 							<TaskCardList
 								className={styles.list}
-								tasks={col.task}
+								columnId={col.id}
 								addTask={<AddTask id={col.id} />}
 							/>
 						</TaskColumn>

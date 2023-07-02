@@ -1,20 +1,27 @@
+import { useStoreMap } from "effector-react"
 import { FC, ReactNode } from "react"
 
-import { Task } from "@/shared/api"
+import { $tasks, taskByColumnIdSelector } from "@/shared/api"
 import { Stack, StackProps } from "@/shared/ui"
 
 import { TaskCard } from "../TaskCard"
 
 interface TaskCardListProps extends StackProps {
-	tasks: Task[]
+	columnId: string
 	addTask: ReactNode
 }
 
 export const TaskCardList: FC<TaskCardListProps> = ({
-	tasks,
+	columnId,
 	addTask: AddTask,
 	...props
 }) => {
+	const tasks = useStoreMap({
+		store: $tasks,
+		keys: [columnId],
+		fn: taskByColumnIdSelector,
+	})
+
 	return (
 		<Stack gap="25px" {...props}>
 			{tasks.map(task => (
