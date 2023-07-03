@@ -26,7 +26,7 @@ export const CreateColumn: FC<CreateColumnProps> = ({
 			</Button>
 			<Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
 				<ModalOverlay />
-				<ModalContent>
+				<ModalContent className={styles.content}>
 					<CreateColumnForm projectId={projectId} />
 				</ModalContent>
 			</Modal>
