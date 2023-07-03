@@ -9,11 +9,13 @@ import { TaskCard } from "../TaskCard"
 interface TaskCardListProps extends StackProps {
 	columnId: string
 	addTask: ReactNode
+	taskOption: FC<{ id: string }>
 }
 
 export const TaskCardList: FC<TaskCardListProps> = ({
 	columnId,
 	addTask: AddTask,
+	taskOption: TaskOption,
 	...props
 }) => {
 	const tasks = useStoreMap({
@@ -25,7 +27,7 @@ export const TaskCardList: FC<TaskCardListProps> = ({
 	return (
 		<Stack gap="25px" {...props}>
 			{tasks.map(task => (
-				<TaskCard task={task} key={task.id} />
+				<TaskCard taskOption={<TaskOption id={task.id} />} task={task} key={task.id} />
 			))}
 			{AddTask}
 		</Stack>

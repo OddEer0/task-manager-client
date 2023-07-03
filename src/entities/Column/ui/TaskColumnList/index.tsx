@@ -2,6 +2,7 @@ import { useStoreMap } from "effector-react"
 import { FC, HTMLAttributes } from "react"
 
 import { EditColumn } from "@/features/ColumnAction"
+import { TaskOption } from "@/features/TaskAction"
 
 // TODO - Реализовать по другому, нарушается архитектура
 import { TaskCardList } from "@/entities/Task"
@@ -39,6 +40,7 @@ export const TaskColumnList: FC<TaskColumnListProps> = ({
 					<Skeleton key={col.id} isLoaded={true}>
 						<TaskColumn column={col} edit={<EditColumn id={col.id} />}>
 							<TaskCardList
+								taskOption={TaskOption}
 								className={styles.list}
 								columnId={col.id}
 								addTask={<AddTask id={col.id} />}
