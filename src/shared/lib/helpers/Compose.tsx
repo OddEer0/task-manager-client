@@ -1,10 +1,13 @@
-import { FC, PropsWithChildren } from "react"
+import { FC, JSXElementConstructor, PropsWithChildren } from "react"
 
 interface ComposeChildren {
-	providers: Array<React.JSXElementConstructor<React.PropsWithChildren<unknown>>>
+	providers: Array<JSXElementConstructor<PropsWithChildren<unknown>>>
 }
 
-export const Compose: FC<PropsWithChildren<ComposeChildren>> = ({ children, providers }) => {
+export const Compose: FC<PropsWithChildren<ComposeChildren>> = ({
+	children,
+	providers,
+}) => {
 	return (
 		<>
 			{providers.reduceRight(
