@@ -1,4 +1,9 @@
-import Enzyme from "enzyme"
-import Adapter from "enzyme-adapter-react-16"
+import matchers from "@testing-library/jest-dom/matchers"
+import { cleanup } from "@testing-library/react"
+import { afterEach, expect } from "vitest"
 
-Enzyme.configure({ adapter: new Adapter() })
+expect.extend(matchers)
+
+afterEach(() => {
+	cleanup()
+})
