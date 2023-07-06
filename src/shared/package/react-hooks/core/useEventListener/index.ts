@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useRef } from "react"
 
-import { useIsomorphicLayoutEffect } from "../utility"
+import { useIsomorphicLayoutEffect } from "../../utility"
 
 function useEventListener<K extends keyof MediaQueryListEventMap>(
 	eventName: K,
@@ -41,7 +41,11 @@ function useEventListener<
 >(
 	eventName: KW | KH | KM,
 	handler: (
-		event: WindowEventMap[KW] | HTMLElementEventMap[KH] | MediaQueryListEventMap[KM] | Event,
+		event:
+			| WindowEventMap[KW]
+			| HTMLElementEventMap[KH]
+			| MediaQueryListEventMap[KM]
+			| Event,
 	) => void,
 	element?: RefObject<T>,
 	options?: boolean | AddEventListenerOptions,
