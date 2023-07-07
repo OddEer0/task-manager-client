@@ -1,5 +1,7 @@
 import { allSettled, fork } from "effector"
 
+import { taskByColumnIdSelector, taskByIdSelector } from "@/shared/api"
+
 import { $tasksApi } from "./task.api"
 import { mockCreateTask, mockTasks, mockUpdateTask } from "./task.mock"
 import { $tasks } from "./task.store"
@@ -46,5 +48,21 @@ describe("Task model testing", () => {
 			params: mockUpdateTask,
 		})
 		expect(scope.getState($tasks)[0].name).toBe(mockUpdateTask.task.name)
+	})
+})
+
+describe("Task selector testing", () => {
+	it("taskByColumnIdSelector", () => {
+		const selectTasks = taskByColumnIdSelector(mockTasks, [mockTasks[0].columnId])
+		expect(selectTasks).toEqual(mockTasks)
+		const selectTasksSecond = taskByColumnIdSelector(mockTasks, ["id"])
+		expect(selectTasksSecond.length).toBe(0)
+	})
+
+	it("taskByIdSelector", () => {
+		const findTask = taskByIdSelector(mockTasks, [mockTasks[0].id])
+		expect(findTask).toEqual(mockTasks[0])
+		const definedTask = taskByIdSelector(mockTasks, ["id"])
+		expect(definedTask).toBeUndefined()
 	})
 })

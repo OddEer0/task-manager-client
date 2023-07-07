@@ -6,7 +6,6 @@ import { Task, TaskCreate, TaskUpdate } from "../../types"
 
 import { $tasks } from "./task.store"
 
-// OPTIMIZATION?
 export const $tasksApi = createApi($tasks, {
 	addTask(state, payload: TaskCreate) {
 		const columnTasks = state.filter(task => task.columnId === payload.columnId)
