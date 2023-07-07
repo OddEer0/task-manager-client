@@ -1,8 +1,8 @@
 import { allSettled, fork } from "effector"
 
-import { $tasksApi } from "./task.api.ts"
-import { mockCreateTask, mockTasks, mockUpdateTask } from "./task.mock.ts"
-import { $tasks } from "./task.store.ts"
+import { $tasksApi } from "./task.api"
+import { mockCreateTask, mockTasks, mockUpdateTask } from "./task.mock"
+import { $tasks } from "./task.store"
 
 describe("Task model testing", () => {
 	it("Should default value empty array", () => {
