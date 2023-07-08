@@ -1,8 +1,834 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1688761775404" clover="3.2.0">
-  <project timestamp="1688761775404" name="All files">
-    <metrics statements="710" coveredstatements="673" conditionals="109" coveredconditionals="103" methods="38" coveredmethods="35" elements="857" coveredelements="811" complexity="0" loc="710" ncloc="710" packages="27" files="50" classes="50"/>
-    <package name="api">
+<coverage generated="1688813217985" clover="3.2.0">
+  <project timestamp="1688813217986" name="All files">
+    <metrics statements="1476" coveredstatements="1196" conditionals="119" coveredconditionals="113" methods="57" coveredmethods="43" elements="1652" coveredelements="1352" complexity="0" loc="1476" ncloc="1476" packages="53" files="81" classes="81"/>
+    <package name="entities.Column">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\entities\Column\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Column.ui">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\entities\Column\ui\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Column.ui.TaskColumn">
+      <metrics statements="38" coveredstatements="38" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\entities\Column\ui\TaskColumn\index.tsx">
+        <metrics statements="38" coveredstatements="38" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+        <line num="30" count="10" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="32" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+        <line num="36" count="10" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Column.ui.TaskColumnList">
+      <metrics statements="54" coveredstatements="54" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\entities\Column\ui\TaskColumnList\index.tsx">
+        <metrics statements="54" coveredstatements="54" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Project">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\entities\Project\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Project.ui">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\entities\Project\ui\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Project.ui.ProjectCard">
+      <metrics statements="47" coveredstatements="45" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\entities\Project\ui\ProjectCard\index.tsx">
+        <metrics statements="47" coveredstatements="45" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="45" count="5" type="stmt"/>
+        <line num="46" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Project.ui.ProjectCardList">
+      <metrics statements="39" coveredstatements="39" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\entities\Project\ui\ProjectCardList\index.tsx">
+        <metrics statements="39" coveredstatements="39" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Task">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\entities\Task\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="lib.ts" path="C:\my directory\marlen\task-manager\src\entities\Task\lib.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Task.ui">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\entities\Task\ui\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Task.ui.TaskCard">
+      <metrics statements="45" coveredstatements="45" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\entities\Task\ui\TaskCard\index.tsx">
+        <metrics statements="45" coveredstatements="45" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="19" count="11" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="25" count="11" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
+        <line num="27" count="11" type="stmt"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="29" count="11" type="stmt"/>
+        <line num="30" count="11" type="stmt"/>
+        <line num="31" count="11" type="stmt"/>
+        <line num="32" count="11" type="stmt"/>
+        <line num="33" count="11" type="stmt"/>
+        <line num="34" count="11" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
+        <line num="36" count="11" type="stmt"/>
+        <line num="37" count="11" type="stmt"/>
+        <line num="38" count="11" type="stmt"/>
+        <line num="39" count="11" type="stmt"/>
+        <line num="40" count="11" type="stmt"/>
+        <line num="41" count="11" type="stmt"/>
+        <line num="42" count="11" type="stmt"/>
+        <line num="43" count="11" type="stmt"/>
+        <line num="44" count="11" type="stmt"/>
+        <line num="45" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Task.ui.TaskCardList">
+      <metrics statements="35" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\entities\Task\ui\TaskCardList\index.tsx">
+        <metrics statements="35" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+        <line num="30" count="10" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.ColumnAction">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="lib.ts" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\lib.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.ColumnAction.ui">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\ui\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.ColumnAction.ui.CreateColumn">
+      <metrics statements="35" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\ui\CreateColumn\index.tsx">
+        <metrics statements="35" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.ColumnAction.ui.CreateColumnForm">
+      <metrics statements="62" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\ui\CreateColumnForm\index.tsx">
+        <metrics statements="62" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.ColumnAction.ui.EditColumn">
+      <metrics statements="28" coveredstatements="28" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\ui\EditColumn\index.tsx">
+        <metrics statements="28" coveredstatements="28" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.ColumnAction.ui.EditColumnForm">
+      <metrics statements="72" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\ColumnAction\ui\EditColumnForm\index.tsx">
+        <metrics statements="72" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.TaskAction">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\features\TaskAction\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.TaskAction.ui">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\features\TaskAction\ui\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.TaskAction.ui.CreateTask">
+      <metrics statements="34" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\TaskAction\ui\CreateTask\index.tsx">
+        <metrics statements="34" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.TaskAction.ui.EditTaskForm">
+      <metrics statements="55" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\TaskAction\ui\EditTaskForm\index.tsx">
+        <metrics statements="55" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.TaskAction.ui.TaskOption">
+      <metrics statements="113" coveredstatements="51" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="DeleteItem.tsx" path="C:\my directory\marlen\task-manager\src\features\TaskAction\ui\TaskOption\DeleteItem.tsx">
+        <metrics statements="52" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+      <file name="EditItem.tsx" path="C:\my directory\marlen\task-manager\src\features\TaskAction\ui\TaskOption\EditItem.tsx">
+        <metrics statements="31" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\features\TaskAction\ui\TaskOption\index.tsx">
+        <metrics statements="30" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.api">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="constants.ts" path="C:\my directory\marlen\task-manager\src\shared\api\constants.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -20,7 +846,7 @@
         <line num="3" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="api.store">
+    <package name="shared.api.store">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -29,8 +855,8 @@
         <line num="3" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="api.store.column">
-      <metrics statements="58" coveredstatements="58" conditionals="12" coveredconditionals="12" methods="5" coveredmethods="5"/>
+    <package name="shared.api.store.column">
+      <metrics statements="59" coveredstatements="59" conditionals="12" coveredconditionals="12" methods="5" coveredmethods="5"/>
       <file name="column.api.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\column\column.api.ts">
         <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
@@ -99,18 +925,20 @@
         <line num="8" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\column\index.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.api.store.project">
+      <metrics statements="50" coveredstatements="50" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\project\index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="api.store.project">
-      <metrics statements="49" coveredstatements="49" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
-      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\project\index.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
       </file>
       <file name="project.api.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\project\project.api.ts">
         <metrics statements="20" coveredstatements="20" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
@@ -169,16 +997,17 @@
         <line num="8" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="api.store.task">
+    <package name="shared.api.store.task">
       <metrics statements="82" coveredstatements="82" conditionals="15" coveredconditionals="14" methods="5" coveredmethods="5"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\task\index.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="task.api.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\task\task.api.ts">
-        <metrics statements="37" coveredstatements="37" conditionals="11" coveredconditionals="10" methods="3" coveredmethods="3"/>
+        <metrics statements="36" coveredstatements="36" conditionals="11" coveredconditionals="10" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -188,8 +1017,8 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
@@ -200,22 +1029,21 @@
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="22" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="24" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="27" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="32" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="33" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
       </file>
       <file name="task.mock.ts" path="C:\my directory\marlen\task-manager\src\shared\api\store\task\task.mock.ts">
         <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -269,7 +1097,7 @@
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="api.types">
+    <package name="shared.api.types">
       <metrics statements="66" coveredstatements="66" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Column.ts" path="C:\my directory\marlen\task-manager\src\shared\api\types\Column.ts">
         <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -353,14 +1181,14 @@
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="lib">
+    <package name="shared.lib">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\lib\index.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="lib.helpers">
+    <package name="shared.lib.helpers">
       <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="Compose.tsx" path="C:\my directory\marlen\task-manager\src\shared\lib\helpers\Compose.tsx">
         <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -394,7 +1222,7 @@
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="lib.helpers.date">
+    <package name="shared.lib.helpers.date">
       <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="date.ts" path="C:\my directory\marlen\task-manager\src\shared\lib\helpers\date\date.ts">
         <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -421,7 +1249,7 @@
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="lib.helpers.number">
+    <package name="shared.lib.helpers.number">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\lib\helpers\number\index.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -437,7 +1265,7 @@
         <line num="6" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="lib.helpers.string">
+    <package name="shared.lib.helpers.string">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\lib\helpers\string\index.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -449,10 +1277,10 @@
         <line num="2" count="1" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
-    <package name="package.classname">
-      <metrics statements="35" coveredstatements="35" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
+    <package name="shared.package.classname">
+      <metrics statements="35" coveredstatements="35" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\classname\index.ts">
-        <metrics statements="35" coveredstatements="35" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <metrics statements="35" coveredstatements="35" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -467,16 +1295,16 @@
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="14" type="stmt"/>
-        <line num="16" count="14" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="32" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="18" type="stmt"/>
-        <line num="19" count="32" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="44" type="stmt"/>
+        <line num="16" count="44" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="92" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="52" type="stmt"/>
+        <line num="19" count="81" type="cond" truecount="2" falsecount="0"/>
         <line num="20" count="2" type="stmt"/>
         <line num="21" count="2" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
-        <line num="24" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="40" type="cond" truecount="2" falsecount="0"/>
         <line num="25" count="6" type="cond" truecount="1" falsecount="0"/>
         <line num="26" count="15" type="stmt"/>
         <line num="27" count="15" type="cond" truecount="1" falsecount="0"/>
@@ -484,13 +1312,13 @@
         <line num="29" count="7" type="stmt"/>
         <line num="30" count="15" type="stmt"/>
         <line num="31" count="6" type="stmt"/>
-        <line num="32" count="32" type="stmt"/>
-        <line num="33" count="14" type="stmt"/>
-        <line num="34" count="14" type="stmt"/>
-        <line num="35" count="14" type="stmt"/>
+        <line num="32" count="92" type="stmt"/>
+        <line num="33" count="44" type="stmt"/>
+        <line num="34" count="44" type="stmt"/>
+        <line num="35" count="44" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks">
+    <package name="shared.package.react-hooks">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -499,7 +1327,7 @@
         <line num="3" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core">
+    <package name="shared.package.react-hooks.core">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\index.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -514,7 +1342,7 @@
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useCopyToClickboard">
+    <package name="shared.package.react-hooks.core.useCopyToClickboard">
       <metrics statements="27" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useCopyToClickboard\index.ts">
         <metrics statements="27" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -547,7 +1375,7 @@
         <line num="27" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useDebounce">
+    <package name="shared.package.react-hooks.core.useDebounce">
       <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useDebounce\index.ts">
         <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
@@ -565,7 +1393,7 @@
         <line num="12" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useElementSize">
+    <package name="shared.package.react-hooks.core.useElementSize">
       <metrics statements="35" coveredstatements="35" conditionals="11" coveredconditionals="11" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useElementSize\index.ts">
         <metrics statements="35" coveredstatements="35" conditionals="11" coveredconditionals="11" methods="1" coveredmethods="1"/>
@@ -606,7 +1434,7 @@
         <line num="35" count="18" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useEventListener">
+    <package name="shared.package.react-hooks.core.useEventListener">
       <metrics statements="74" coveredstatements="74" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useEventListener\index.ts">
         <metrics statements="74" coveredstatements="74" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
@@ -686,7 +1514,7 @@
         <line num="74" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useInput">
+    <package name="shared.package.react-hooks.core.useInput">
       <metrics statements="14" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useInput\index.ts">
         <metrics statements="14" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
@@ -706,7 +1534,7 @@
         <line num="14" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useOutsideClick">
+    <package name="shared.package.react-hooks.core.useOutsideClick">
       <metrics statements="32" coveredstatements="27" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="2"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useOutsideClick\index.ts">
         <metrics statements="32" coveredstatements="27" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="2"/>
@@ -744,7 +1572,7 @@
         <line num="32" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useScreen">
+    <package name="shared.package.react-hooks.core.useScreen">
       <metrics statements="27" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useScreen\index.ts">
         <metrics statements="27" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -777,7 +1605,7 @@
         <line num="27" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useThrottleCallback">
+    <package name="shared.package.react-hooks.core.useThrottleCallback">
       <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useThrottleCallback\index.ts">
         <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -796,7 +1624,7 @@
         <line num="13" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useToggle">
+    <package name="shared.package.react-hooks.core.useToggle">
       <metrics statements="30" coveredstatements="28" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useToggle\index.ts">
         <metrics statements="30" coveredstatements="28" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -832,7 +1660,7 @@
         <line num="30" count="6" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.core.useUpdateEffect">
+    <package name="shared.package.react-hooks.core.useUpdateEffect">
       <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\core\useUpdateEffect\index.ts">
         <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
@@ -851,7 +1679,7 @@
         <line num="13" count="8" type="stmt"/>
       </file>
     </package>
-    <package name="package.react-hooks.utility">
+    <package name="shared.package.react-hooks.utility">
       <metrics statements="28" coveredstatements="28" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\react-hooks\utility\index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -894,7 +1722,7 @@
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="package.uuid">
+    <package name="shared.package.uuid">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\package\uuid\index.ts">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -909,8 +1737,112 @@
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="ui.data-display.UserHead">
-      <metrics statements="28" coveredstatements="28" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+    <package name="shared.test">
+      <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\my directory\marlen\task-manager\src\shared\test\index.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui">
+      <metrics statements="73" coveredstatements="73" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\ui\index.ts">
+        <metrics statements="73" coveredstatements="73" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.data-display">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\ui\data-display\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.data-display.UserHead">
+      <metrics statements="30" coveredstatements="30" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="UserHead.tsx" path="C:\my directory\marlen\task-manager\src\shared\ui\data-display\UserHead\UserHead.tsx">
         <metrics statements="28" coveredstatements="28" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -941,6 +1873,11 @@
         <line num="26" count="3" type="stmt"/>
         <line num="27" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\my directory\marlen\task-manager\src\shared\ui\data-display\UserHead\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
       </file>
     </package>
   </project>

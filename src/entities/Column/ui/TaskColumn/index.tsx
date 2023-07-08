@@ -9,7 +9,6 @@ import styles from "./styles.module.scss"
 interface TaskColumnProps extends HTMLAttributes<HTMLDivElement> {
 	column: Column
 	edit?: ReactNode
-	taskList?: ReactNode
 }
 
 export const TaskColumn: FC<PropsWithChildren<TaskColumnProps>> = ({
