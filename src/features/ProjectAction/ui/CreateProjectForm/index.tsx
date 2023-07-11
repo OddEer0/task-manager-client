@@ -7,7 +7,7 @@ import { ProjectCreate } from "@/shared/api"
 import { $projectsApi } from "@/shared/api"
 import { Button, FormControl, FormLabel, Input } from "@/shared/ui"
 
-import { MIN_LENGTH_MESSAGE, REQUIRED_MESSAGE } from "../../lib.ts"
+import { CREATE_PROJECT_NAME, MIN_LENGTH_MESSAGE, REQUIRED_MESSAGE } from "../../lib"
 
 import styles from "./styles.module.scss"
 
@@ -28,7 +28,7 @@ export const CreateProjectForm: FC = () => {
 	return (
 		<form className={styles.form} onSubmit={submitHandle}>
 			<FormControl>
-				<FormLabel>Название проекта</FormLabel>
+				<FormLabel>{CREATE_PROJECT_NAME}</FormLabel>
 				<Input
 					isInvalid={!!errors.name}
 					{...register("name", {

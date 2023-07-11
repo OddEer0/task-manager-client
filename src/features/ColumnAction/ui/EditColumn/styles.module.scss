@@ -1,0 +1,11 @@
+.icon {
+	cursor: pointer;
+	font-size: 22px;
+	padding: 4px;
+	border-radius: 5px;
+	transition: background .3s ease-in-out;
+
+	&:hover {
+		background: var(--chakra-colors-bg-200);
+	}
+}

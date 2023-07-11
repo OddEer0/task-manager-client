@@ -1,2 +1,2 @@
 export { CreateColumn } from "./CreateColumn"
-export { CreateTask } from "./CreateTask"
+export { EditColumn } from "./EditColumn"

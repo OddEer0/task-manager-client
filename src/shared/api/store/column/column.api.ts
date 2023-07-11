@@ -1,7 +1,7 @@
 import { createApi } from "effector"
 
 import { ColumnCreate, ColumnUpdate } from "@/shared/api"
-import { uuid } from "@/shared/package/uuid.ts"
+import { uuid } from "@/shared/package/uuid"
 
 import { $columns } from "./column.store"
 

@@ -8,6 +8,7 @@ export default mergeConfig(
 		test: {
 			globals: true,
 			setupFiles: "./jest.setup.js",
+			environment: "jsdom",
 		},
 	}),
 )

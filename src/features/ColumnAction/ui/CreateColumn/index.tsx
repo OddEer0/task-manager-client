@@ -1,4 +1,4 @@
-import { FC, useState } from "react"
+import { FC, PropsWithChildren, useState } from "react"
 
 import { classname } from "@/shared/package/classname"
 import { Button, ButtonProps, Modal, ModalContent, ModalOverlay } from "@/shared/ui"
@@ -11,9 +11,10 @@ interface CreateColumnProps extends ButtonProps {
 	projectId: string
 }
 
-export const CreateColumn: FC<CreateColumnProps> = ({
+export const CreateColumn: FC<PropsWithChildren<CreateColumnProps>> = ({
 	projectId,
 	className,
+	children,
 	...props
 }) => {
 	const classes = classname(styles.button, className)
@@ -22,11 +23,11 @@ export const CreateColumn: FC<CreateColumnProps> = ({
 	return (
 		<>
 			<Button className={classes} onClick={() => setIsOpen(true)} {...props}>
-				+
+				{children}
 			</Button>
 			<Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
 				<ModalOverlay />
-				<ModalContent>
+				<ModalContent className={styles.content} data-testid="modal-content">
 					<CreateColumnForm projectId={projectId} />
 				</ModalContent>
 			</Modal>
