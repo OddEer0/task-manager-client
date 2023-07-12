@@ -11,12 +11,16 @@ import styles from "./styles.module.scss"
 interface TaskCardProps extends CardProps {
 	task: Task
 	taskOption: ReactNode
+	addTag?: ReactNode
+	addPriority?: ReactNode
 }
 
 export const TaskCard: FC<TaskCardProps> = ({
 	taskOption: TaskOption,
 	className,
 	task,
+	addTag,
+	addPriority,
 	...props
 }) => {
 	const classes = classname(styles.card, className)
@@ -39,6 +43,8 @@ export const TaskCard: FC<TaskCardProps> = ({
 						))}
 					</Stack>
 				)}
+				{addTag}
+				{addPriority}
 			</CardBody>
 		</Card>
 	)

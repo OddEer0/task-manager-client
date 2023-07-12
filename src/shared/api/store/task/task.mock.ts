@@ -1,4 +1,6 @@
-import { Task, TaskCreate, TaskUpdate } from "@/shared/api"
+import { Task, TaskAddTag, TaskCreate, TaskUpdate } from "@/shared/api"
+
+import { mockTags } from "../tag"
 
 export const mockCreateTask: TaskCreate = { name: "Go to file", columnId: "fakeId" }
 
@@ -24,3 +26,8 @@ export const mockTasks: Task[] = [
 		description: null,
 	},
 ]
+
+export const mockTaskAddTag: TaskAddTag = {
+	id: "first",
+	tag: mockTags[0],
+}

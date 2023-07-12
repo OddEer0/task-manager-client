@@ -18,6 +18,28 @@ describe("TaskCard component testing", () => {
 		expect(screen.getByText(/task option/i)).toBeInTheDocument()
 	})
 
+	it("Should render addTag component", () => {
+		render(
+			<TaskCard
+				task={mockTasks[0]}
+				taskOption={<p>task option</p>}
+				addTag={<p>add tag</p>}
+			/>,
+		)
+		expect(screen.getByText(/add tag/i)).toBeInTheDocument()
+	})
+
+	it("Should render addPriority component", () => {
+		render(
+			<TaskCard
+				task={mockTasks[0]}
+				taskOption={<p>task option</p>}
+				addPriority={<p>add priority</p>}
+			/>,
+		)
+		expect(screen.getByText(/add priority/i)).toBeInTheDocument()
+	})
+
 	it("Should add classname and other attr", () => {
 		render(
 			<TaskCard
