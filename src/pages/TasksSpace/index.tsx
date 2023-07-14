@@ -1,10 +1,10 @@
 import { FC } from "react"
 import { Navigate, useParams } from "react-router-dom"
 
+import { TaskColumnList } from "@/widgets/TaskSpace"
+
 import { CreateColumn } from "@/features/ColumnAction"
 import { CreateTask } from "@/features/TaskAction"
-
-import { TaskColumnList } from "@/entities/Column"
 
 import styles from "./styles.module.scss"
 

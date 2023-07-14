@@ -65,9 +65,17 @@ export {
 	AlertDialogContent,
 	AlertDialogOverlay,
 	AlertDialogCloseButton,
+	InputGroup,
+	InputRightElement,
+	Tag,
+	TagLabel,
+	TagLeftIcon,
+	TagRightIcon,
 	type ButtonProps,
 	type StackProps,
 	type CardProps,
+	type InputGroupProps,
+	type MenuButtonProps,
 } from "@chakra-ui/react"
 
 export * from "./data-display"

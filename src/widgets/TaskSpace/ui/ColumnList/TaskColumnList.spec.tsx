@@ -3,9 +3,9 @@ import { fork } from "effector"
 import { Provider } from "effector-react"
 import { FC } from "react"
 
-import { TaskColumnList } from "@/entities/Column"
-
 import { $columns, mockColumns } from "@/shared/api"
+
+import { TaskColumnList } from "./index"
 
 const AddTaskFakeComponent: FC<{ id: string }> = ({ id }) => <p>{id}</p>
 

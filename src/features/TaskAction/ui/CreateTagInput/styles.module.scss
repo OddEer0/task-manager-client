@@ -1,0 +1,13 @@
+.check {
+	cursor: pointer;
+
+	&:hover .checkIcon {
+		background: var(--chakra-colors-gray-600);
+	}
+}
+
+.checkIcon {
+	border-radius: 7px;
+	font-size: 28px;
+	transition: all .3s ease-in-out;
+}
