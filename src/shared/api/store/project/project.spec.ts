@@ -1,7 +1,7 @@
 import { allSettled, fork } from "effector"
 
 import { $projectsApi } from "./project.api"
-import { mockCreateProject, mockProjects, mockUpdateProject } from "./project.mock.ts"
+import { mockCreateProject, mockProjects, mockUpdateProject } from "./project.mock"
 import { $projects } from "./project.store"
 
 describe("Project model testing", () => {
@@ -22,7 +22,9 @@ describe("Project model testing", () => {
 	})
 
 	it("Should delete project", async () => {
-		const scope = fork({ values: new Map([[$projects, mockProjects]]) })
+		const scope = fork({
+			values: new Map([[$projects, mockProjects]]),
+		})
 		expect(scope.getState($projects).length).toBe(2)
 
 		await allSettled($projectsApi.deleteProject, {

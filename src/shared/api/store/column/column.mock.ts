@@ -7,13 +7,25 @@ export const mockCreateColumn: ColumnCreate = {
 }
 
 export const mockUpdateColumn: ColumnUpdate = {
-	id: "first",
+	id: "column-first",
 	column: {
 		name: "progress",
 	},
 }
 
 export const mockColumns: Column[] = [
-	{ id: "first", name: "TODO", bg: "#000000", projectId: "fakeId", order: 1 },
-	{ id: "second", name: "BACKLOG", bg: "#000000", projectId: "fakeId", order: 2 },
+	{
+		id: "column-first",
+		name: "TODO",
+		bg: "#000000",
+		projectId: "project-first",
+		order: 1,
+	},
+	{
+		id: "column-second",
+		name: "BACKLOG",
+		bg: "#000000",
+		projectId: "project-second",
+		order: 2,
+	},
 ]

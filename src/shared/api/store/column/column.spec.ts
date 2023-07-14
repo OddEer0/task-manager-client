@@ -6,11 +6,10 @@ import {
 	columnByIdSelector,
 	columnByProjectIdSelector,
 } from "@/shared/api"
-import {
-	mockColumns,
-	mockCreateColumn,
-	mockUpdateColumn,
-} from "@/shared/api/store/column/column.mock.ts"
+
+import { $tasks, mockTasks } from "../task"
+
+import { mockColumns, mockCreateColumn, mockUpdateColumn } from "./column.mock"
 
 describe("Column model testing", () => {
 	it("Should default state empty array", () => {
@@ -31,15 +30,22 @@ describe("Column model testing", () => {
 
 	it("Should delete column", async () => {
 		const scope = fork({
-			values: new Map([[$columns, mockColumns]]),
+			values: [
+				[$columns, mockColumns],
+				[$tasks, mockTasks],
+			],
 		})
+		const getColumnTasks = () =>
+			scope.getState($tasks).filter(task => task.columnId === mockColumns[0].id)
 		expect(scope.getState($columns).length).toBe(2)
+		expect(getColumnTasks().length).toBe(1)
 
 		await allSettled($columnsApi.deleteColumn, {
 			scope,
 			params: mockColumns[0].id,
 		})
 		expect(scope.getState($columns).length).toBe(1)
+		expect(getColumnTasks().length).toBe(0)
 	})
 
 	it("Should update column", async () => {
@@ -61,7 +67,7 @@ describe("Column selector testing", () => {
 		const selectColumns = columnByProjectIdSelector(mockColumns, [
 			mockColumns[0].projectId,
 		])
-		expect(selectColumns).toEqual(mockColumns)
+		expect(selectColumns).toEqual([mockColumns[0]])
 		const selectColumnsSecond = columnByProjectIdSelector(mockColumns, ["id"])
 		expect(selectColumnsSecond.length).toBe(0)
 	})

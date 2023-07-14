@@ -9,11 +9,13 @@ import styles from "./styles.module.scss"
 interface TaskColumnProps extends HTMLAttributes<HTMLDivElement> {
 	column: Column
 	edit?: ReactNode
+	delete?: ReactNode
 }
 
 export const TaskColumn: FC<PropsWithChildren<TaskColumnProps>> = ({
 	column,
 	edit: Edit,
+	delete: Delete,
 	className,
 	children,
 	...props
@@ -29,7 +31,10 @@ export const TaskColumn: FC<PropsWithChildren<TaskColumnProps>> = ({
 					<Text className={styles.title}>{name}</Text>
 					<Text className={styles.count}></Text>
 				</div>
-				{Edit && Edit}
+				<div className={styles.actions}>
+					{Edit && Edit}
+					{Delete && Delete}
+				</div>
 			</div>
 			<div className={styles.divider} style={{ background: bg }} />
 			<div className={styles.body}>{children}</div>
