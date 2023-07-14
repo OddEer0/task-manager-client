@@ -9,7 +9,8 @@
 		"scss/at-import-partial-extension": null,
 		"color-hex-length": "short",
 		"declaration-empty-line-before": null,
-		"at-rule-empty-line-before": null
+		"at-rule-empty-line-before": null,
+		"no-descending-specificity": null
 	},
 	"ignoreFiles": ["build/*", "./src/app/styles/*.scss"]
 }

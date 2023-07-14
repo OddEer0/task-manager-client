@@ -2,16 +2,14 @@ import { useStoreMap } from "effector-react"
 import { FC, HTMLAttributes } from "react"
 
 import { EditColumn } from "@/features/ColumnAction"
-import { TaskOption } from "@/features/TaskAction"
 
-// TODO - Реализовать по другому, нарушается архитектура
-import { TaskCardList } from "@/entities/Task"
+import { TaskColumn } from "@/entities/Column/ui/TaskColumn"
 
 import { $columns, columnByProjectIdSelector } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
 import { Skeleton, Stack } from "@/shared/ui"
 
-import { TaskColumn } from "../TaskColumn"
+import { TaskList as TaskCardList } from "../TaskList"
 
 import styles from "./styles.module.scss"
 
@@ -40,7 +38,6 @@ export const TaskColumnList: FC<TaskColumnListProps> = ({
 					<Skeleton key={col.id} isLoaded={true}>
 						<TaskColumn column={col} edit={<EditColumn id={col.id} />}>
 							<TaskCardList
-								taskOption={TaskOption}
 								className={styles.list}
 								columnId={col.id}
 								addTask={<AddTask id={col.id} />}

@@ -1,1 +1,1 @@
-export { TaskColumnList } from "./TaskColumnList"
+export { TaskColumn } from "./TaskColumn"

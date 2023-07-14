@@ -18,3 +18,8 @@ export interface TaskUpdate {
 	task: Partial<Omit<Task, "id" | "columnId">>
 	id: string
 }
+
+export interface TaskAddTag {
+	id: string
+	tag: Tag
+}

@@ -1,0 +1,23 @@
+.inputGroup {
+	width: calc(100% - 10px) !important;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.itemBadge {
+	border-radius: 8px;
+	height: 25px;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.icon {
+	padding: 4px;
+	font-size: 20px;
+	border-radius: 7px;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		background: var(--chakra-colors-bg-400) !important;
+	}
+}

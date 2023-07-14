@@ -1,8 +1,9 @@
+import { CardFooter } from "@chakra-ui/react"
 import { FC, ReactNode } from "react"
 
 import { Task } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
-import { Badge, Card, CardBody, CardHeader, CardProps, Stack, Text } from "@/shared/ui"
+import { Card, CardBody, CardHeader, CardProps, Text } from "@/shared/ui"
 
 import { DESCRIPTION_TASK_PLACEHOLDER } from "../../lib.ts"
 
@@ -11,12 +12,18 @@ import styles from "./styles.module.scss"
 interface TaskCardProps extends CardProps {
 	task: Task
 	taskOption: ReactNode
+	addTag?: ReactNode
+	addPriority?: ReactNode
+	tagList?: ReactNode
 }
 
 export const TaskCard: FC<TaskCardProps> = ({
 	taskOption: TaskOption,
 	className,
 	task,
+	addTag,
+	addPriority,
+	tagList,
 	...props
 }) => {
 	const classes = classname(styles.card, className)
@@ -30,16 +37,12 @@ export const TaskCard: FC<TaskCardProps> = ({
 				<Text className={styles.description} fontSize="xs">
 					{description || DESCRIPTION_TASK_PLACEHOLDER}
 				</Text>
-				{!!tags.length && (
-					<Stack direction="row">
-						{tags.map(tag => (
-							<Badge key={tag.id} sx={{ background: tag.bg, color: tag.color }}>
-								{tag.name}
-							</Badge>
-						))}
-					</Stack>
-				)}
+				{!!tags.length && tagList}
 			</CardBody>
+			<CardFooter className={styles.footer}>
+				{addTag}
+				{addPriority}
+			</CardFooter>
 		</Card>
 	)
 }

@@ -1,6 +1,6 @@
 import { allSettled, fork } from "effector"
 
-import { taskByColumnIdSelector, taskByIdSelector } from "@/shared/api"
+import { mockTaskAddTag, taskByColumnIdSelector, taskByIdSelector } from "@/shared/api"
 
 import { $tasksApi } from "./task.api"
 import { mockCreateTask, mockTasks, mockUpdateTask } from "./task.mock"
@@ -21,6 +21,20 @@ describe("Task model testing", () => {
 		})
 
 		expect(scope.getState($tasks).length).toBe(1)
+	})
+
+	it("Should task add tag", async () => {
+		const scope = fork({
+			values: new Map([[$tasks, mockTasks]]),
+		})
+		expect(scope.getState($tasks)[0].tags.length).toBe(0)
+
+		await allSettled($tasksApi.addTag, {
+			scope,
+			params: mockTaskAddTag,
+		})
+
+		expect(scope.getState($tasks)[0].tags.length).toBe(1)
 	})
 
 	it("Should delete task", async () => {
