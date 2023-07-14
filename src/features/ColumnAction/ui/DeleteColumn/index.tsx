@@ -6,27 +6,36 @@ import {
 	ModalOverlay,
 	Text,
 } from "@chakra-ui/react"
+import { useEvent } from "effector-react"
 import { FC } from "react"
+import { IconBaseProps } from "react-icons"
 import { RiDeleteBin6Line } from "react-icons/ri"
 
 import { $columnsApi } from "@/shared/api"
+import { classname } from "@/shared/package/classname"
 import { useDisclosure } from "@/shared/package/react-hooks"
 
 import styles from "./styles.module.scss"
 
-interface DeleteColumnProps {
+interface DeleteColumnProps extends IconBaseProps {
 	id: string
 }
 
-export const DeleteColumn: FC<DeleteColumnProps> = ({ id }) => {
+export const DeleteColumn: FC<DeleteColumnProps> = ({ id, className, ...props }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+	const deleteColumn = useEvent($columnsApi.deleteColumn)
 	const clickHandle = () => {
-		$columnsApi.deleteColumn(id)
+		deleteColumn(id)
+		onClose()
 	}
 
 	return (
 		<>
-			<RiDeleteBin6Line className={styles.icon} onClick={onOpen} />
+			<RiDeleteBin6Line
+				className={classname(styles.icon, className)}
+				onClick={onOpen}
+				{...props}
+			/>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent className={styles.modal}>

@@ -1,11 +1,12 @@
 $HEAD_HEIGHT: 34px;
-$LIST_MARGIN: 20px;
+$LIST_MARGIN: 30px;
+$HEAD_TAB_HEIGHT: 1px;
 
 .column {
 	border-radius: 15px;
 	@include flex-col;
 	width: 330px;
-	height: calc(100vh - $LIST_MARGIN);
+	height: calc(100vh - $LIST_MARGIN - $HEAD_TAB_HEIGHT);
 	background: var(--chakra-colors-bg-50);
 }
 

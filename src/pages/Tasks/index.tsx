@@ -12,7 +12,7 @@ export const TasksPage: FC = () => {
 	return (
 		<>
 			<section className={classname(styles.section, styles.first)}>
-				<CreateProject />
+				<CreateProject>Создать проект</CreateProject>
 			</section>
 			<section className={classname(styles.section, styles.second)}>
 				<ProjectCardList edit={EditProjectIcon} />
