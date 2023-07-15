@@ -1,9 +1,9 @@
 import { useStoreMap } from "effector-react"
 import { FC, HTMLAttributes } from "react"
 
-import { EditColumn } from "@/features/ColumnAction"
+import { DeleteColumn, EditColumn } from "@/features/ColumnAction"
 
-import { TaskColumn } from "@/entities/Column/ui/TaskColumn"
+import { TaskColumn } from "@/entities/Column"
 
 import { $columns, columnByProjectIdSelector } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
@@ -36,7 +36,11 @@ export const TaskColumnList: FC<TaskColumnListProps> = ({
 			<Stack direction="row" gap="15px">
 				{columns.map(col => (
 					<Skeleton key={col.id} isLoaded={true}>
-						<TaskColumn column={col} edit={<EditColumn id={col.id} />}>
+						<TaskColumn
+							column={col}
+							edit={<EditColumn id={col.id} />}
+							delete={<DeleteColumn id={col.id} />}
+						>
 							<TaskCardList
 								className={styles.list}
 								columnId={col.id}

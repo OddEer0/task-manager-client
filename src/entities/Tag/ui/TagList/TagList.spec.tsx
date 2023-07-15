@@ -8,7 +8,7 @@ import { mockTags } from "@/shared/api"
 const FakeOptionComponent: FC<{ id: string }> = ({ id }) => <p>{id}</p>
 
 describe("TagList component testing", () => {
-	it("Should render component", () => {
+	it("Should render component and tag option components", () => {
 		render(<TagList tags={mockTags} tagOptions={FakeOptionComponent} />)
 		expect(screen.getByText(mockTags[0].name)).toBeInTheDocument()
 	})

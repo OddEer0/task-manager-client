@@ -18,7 +18,9 @@ export const TasksSpacePage: FC = () => {
 	return (
 		<section className={styles.section}>
 			<TaskColumnList id={params.id} addTask={CreateTask} />
-			<CreateColumn projectId={params.id} />
+			<CreateColumn className={styles.create} projectId={params.id}>
+				Создать доску
+			</CreateColumn>
 		</section>
 	)
 }

@@ -1,9 +1,10 @@
 import { screen } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 
 import { ProjectCard } from "@/entities/Project"
 
 import { mockProjects } from "@/shared/api"
-import { renderWithRouter } from "@/shared/test"
+import { LocationDisplay, renderWithRouter } from "@/shared/test"
 
 describe("ProjectCard component testing", () => {
 	const testId = "test-id"
@@ -33,5 +34,20 @@ describe("ProjectCard component testing", () => {
 			<ProjectCard project={mockProjects[0]} setting={<p>setting component</p>} />,
 		)
 		expect(screen.getByText(/setting component/i)).toBeInTheDocument()
+	})
+
+	it("Should click link work", async () => {
+		const initialRoute = "/task"
+
+		renderWithRouter(
+			<>
+				<ProjectCard project={mockProjects[0]} />
+				<LocationDisplay />
+			</>,
+			{ route: initialRoute },
+		)
+		expect(screen.getByTestId("location-display")).toHaveTextContent(initialRoute)
+		await userEvent.click(screen.getByText(mockProjects[0].name))
+		expect(screen.getByTestId("location-display")).toHaveTextContent(mockProjects[0].id)
 	})
 })

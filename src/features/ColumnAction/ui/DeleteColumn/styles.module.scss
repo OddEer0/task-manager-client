@@ -1,0 +1,19 @@
+.icon {
+	cursor: pointer;
+	font-size: 24px;
+	padding: 3px;
+	border-radius: 6px;
+	color: var(--chakra-colors-red-400);
+
+	&:hover {
+		background: var(--chakra-colors-bg-100);
+	}
+}
+
+.modal {
+	padding: 15px;
+}
+
+.footer {
+	gap: 15px;
+}

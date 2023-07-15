@@ -27,14 +27,14 @@ describe("Task model testing", () => {
 		const scope = fork({
 			values: new Map([[$tasks, mockTasks]]),
 		})
-		expect(scope.getState($tasks)[0].tags.length).toBe(0)
+		expect(scope.getState($tasks)[0].tags.length).toBe(1)
 
 		await allSettled($tasksApi.addTag, {
 			scope,
 			params: mockTaskAddTag,
 		})
 
-		expect(scope.getState($tasks)[0].tags.length).toBe(1)
+		expect(scope.getState($tasks)[0].tags.length).toBe(2)
 	})
 
 	it("Should delete task", async () => {
@@ -68,7 +68,7 @@ describe("Task model testing", () => {
 describe("Task selector testing", () => {
 	it("taskByColumnIdSelector", () => {
 		const selectTasks = taskByColumnIdSelector(mockTasks, [mockTasks[0].columnId])
-		expect(selectTasks).toEqual(mockTasks)
+		expect(selectTasks).toEqual([mockTasks[0]])
 		const selectTasksSecond = taskByColumnIdSelector(mockTasks, ["id"])
 		expect(selectTasksSecond.length).toBe(0)
 	})
@@ -76,7 +76,7 @@ describe("Task selector testing", () => {
 	it("taskByIdSelector", () => {
 		const findTask = taskByIdSelector(mockTasks, [mockTasks[0].id])
 		expect(findTask).toEqual(mockTasks[0])
-		const definedTask = taskByIdSelector(mockTasks, ["id"])
+		const definedTask = taskByIdSelector(mockTasks, ["fake"])
 		expect(definedTask).toBeUndefined()
 	})
 })

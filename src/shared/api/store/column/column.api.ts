@@ -1,7 +1,9 @@
-import { createApi } from "effector"
+import { createApi, sample } from "effector"
 
 import { ColumnCreate, ColumnUpdate } from "@/shared/api"
 import { uuid } from "@/shared/package/uuid"
+
+import { $tasks } from "../task"
 
 import { $columns } from "./column.store"
 
@@ -18,4 +20,11 @@ export const $columnsApi = createApi($columns, {
 			.filter(col => col.id !== payload)
 			.map((col, i) => ({ ...col, order: i + 1 }))
 	},
+})
+
+sample({
+	clock: $columnsApi.deleteColumn,
+	source: $tasks,
+	fn: (tasks, deleteArg) => tasks.filter(task => task.columnId !== deleteArg),
+	target: $tasks,
 })

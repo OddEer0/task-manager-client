@@ -1,13 +1,25 @@
 import { Tag, TagCreate, TagUpdate } from "@/shared/api"
 
 export const mockTags: Tag[] = [
-	{ id: "first", name: "frontend", bg: "#ffffff", color: "#000000", projectId: "fakeId" },
-	{ id: "second", name: "feature", bg: "#ffffff", color: "#000000", projectId: "fakeId" },
+	{
+		id: "first",
+		name: "frontend",
+		bg: "#ffffff",
+		color: "#000000",
+		projectId: "project-first",
+	},
+	{
+		id: "second",
+		name: "feature",
+		bg: "#ffffff",
+		color: "#000000",
+		projectId: "project-second",
+	},
 ]
 
 export const mockTagCreate: TagCreate = {
 	name: "frontend",
-	projectId: "fakeId",
+	projectId: "project-first",
 }
 
 export const mockTagUpdate: TagUpdate = {

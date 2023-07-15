@@ -15,7 +15,7 @@ export const TagOptions: FC<TagOptionsProps> = ({ id, ...props }) => {
 			<MenuButton {...props}>
 				<SlOptions className={styles.icon} />
 			</MenuButton>
-			<MenuList>
+			<MenuList data-testid="tag-options-menu">
 				<ChangeColorItem id={id} />
 			</MenuList>
 		</Menu>

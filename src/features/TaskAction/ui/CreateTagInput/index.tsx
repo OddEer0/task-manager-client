@@ -1,3 +1,4 @@
+import { useEvent } from "effector-react"
 import { FC, useRef } from "react"
 import { BsCheck } from "react-icons/bs"
 
@@ -12,10 +13,11 @@ interface CreateTagInputProps extends InputGroupProps {
 
 export const CreateTagInput: FC<CreateTagInputProps> = ({ projectId, ...props }) => {
 	const inputRef = useRef<HTMLInputElement>(null)
+	const addTag = useEvent($tagsApi.addTag)
 
 	const createTagHandle = () => {
 		if (inputRef.current) {
-			$tagsApi.addTag({ name: inputRef.current.value, projectId })
+			addTag({ name: inputRef.current.value, projectId })
 			inputRef.current.value = ""
 		}
 	}
