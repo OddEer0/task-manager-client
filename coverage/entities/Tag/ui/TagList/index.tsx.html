@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for entities/Task/ui/TaskCardList/index.tsx</title>
+    <title>Code coverage report for entities/Tag/ui/TagList/index.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">entities/Task/ui/TaskCardList</a> index.tsx</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">entities/Tag/ui/TagList</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>35/35</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>35/35</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
@@ -96,9 +96,7 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -113,58 +111,54 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useStoreMap } from "effector-react"
-import { FC, ReactNode } from "react"
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { SystemStyleObject } from "@chakra-ui/react"
+import { FC } from "react"
 &nbsp;
-import { $tasks, taskByColumnIdSelector } from "@/shared/api"
-import { Stack, StackProps } from "@/shared/ui"
+import { Tag } from "@/shared/api"
+import { Stack, StackProps, Tag as TagComp, TagLabel } from "@/shared/ui"
 &nbsp;
-import { TaskCard } from "../TaskCard"
+import styles from "./styles.module.scss"
 &nbsp;
-interface TaskCardListProps extends StackProps {
-	columnId: string
-	addTask: ReactNode
-	taskOption: FC&lt;{ id: string }&gt;
+interface TagList extends StackProps {
+	tags: Tag[]
+	tagOptions: FC&lt;{ id: string; className?: string; sx?: SystemStyleObject }&gt;
 }
 &nbsp;
-export const TaskCardList: FC&lt;TaskCardListProps&gt; = ({
-	columnId,
-	addTask: AddTask,
-	taskOption: TaskOption,
-	...props
-}) =&gt; {
-	const tasks = useStoreMap({
-		store: $tasks,
-		keys: [columnId],
-		fn: taskByColumnIdSelector,
-	})
-&nbsp;
+export const TagList: FC&lt;TagList&gt; = ({ tags, tagOptions: TagOptions, ...props }) =&gt; {
 	return (
-		&lt;Stack gap="25px" {...props}&gt;
-			{tasks.map(task =&gt; (
-				&lt;TaskCard taskOption={&lt;TaskOption id={task.id} /&gt;} task={task} key={task.id} /&gt;
+		&lt;Stack wrap="wrap" direction="row" {...props}&gt;
+			{tags.map(tag =&gt; (
+				&lt;TagComp
+					className={styles.tag}
+					key={tag.id}
+					sx={{ background: tag.bg, color: tag.color }}
+				&gt;
+					&lt;TagLabel&gt;{tag.name}&lt;/TagLabel&gt;
+					&lt;TagOptions
+						id={tag.id}
+						className={styles.option}
+						sx={{ background: tag.bg, boxShadow: `0px 0px 5px ${tag.bg}` }}
+					/&gt;
+				&lt;/TagComp&gt;
 			))}
-			{AddTask}
 		&lt;/Stack&gt;
 	)
 }
@@ -175,7 +169,7 @@ export const TaskCardList: FC&lt;TaskCardListProps&gt; = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-08T10:46:57.767Z
+                at 2023-07-15T16:36:11.775Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -8,11 +8,14 @@ import { $tags, $tagsApi, TagUpdate, tagByIdSelector } from "@/shared/api"
 import { useDisclosure } from "@/shared/package/react-hooks"
 import { Button, MenuItem } from "@/shared/ui"
 
+import { CHANGE_COLOR_FORM_BUTTON, CHANGE_COLOR_ITEM } from "../../lib"
+
 interface ChangeColorItemProps {
 	id: string
+	onDataSubmit?: (data?: TagUpdate["tag"]) => void
 }
 
-export const ChangeColorItem: FC<ChangeColorItemProps> = ({ id }) => {
+export const ChangeColorItem: FC<ChangeColorItemProps> = ({ onDataSubmit, id }) => {
 	const { isOpen, onClose, onOpen } = useDisclosure()
 	const tag = useStoreMap({
 		store: $tags,
@@ -28,11 +31,12 @@ export const ChangeColorItem: FC<ChangeColorItemProps> = ({ id }) => {
 
 	const submitHandle = handleSubmit((data: TagUpdate["tag"]) => {
 		$tagsApi.updateTag({ id, tag: data })
+		onDataSubmit?.call(null, data)
 	})
 
 	return (
 		<>
-			<MenuItem onClick={onOpen}>Выбрать цвет</MenuItem>
+			<MenuItem onClick={onOpen}>{CHANGE_COLOR_ITEM}</MenuItem>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent>
@@ -59,7 +63,7 @@ export const ChangeColorItem: FC<ChangeColorItemProps> = ({ id }) => {
 							control={control}
 							name="color"
 						/>
-						<Button type="submit">Подтвердить</Button>
+						<Button type="submit">{CHANGE_COLOR_FORM_BUTTON}</Button>
 					</form>
 				</ModalContent>
 			</Modal>
