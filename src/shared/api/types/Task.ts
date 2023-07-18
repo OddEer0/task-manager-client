@@ -23,3 +23,8 @@ export interface TaskAddTag {
 	id: string
 	tag: Tag
 }
+
+export interface TaskRemoveTag {
+	taskId: string
+	tagId: string
+}

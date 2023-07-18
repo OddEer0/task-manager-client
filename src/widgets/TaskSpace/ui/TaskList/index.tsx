@@ -2,7 +2,7 @@ import { useStoreMap } from "effector-react"
 import { FC, ReactNode } from "react"
 
 import { TagOptions } from "@/features/TagAction"
-import { AddTaskTag, TaskOption } from "@/features/TaskAction"
+import { AddTaskTag, RemoveTaskTag, TaskOption } from "@/features/TaskAction"
 
 import { TagList } from "@/entities/Tag"
 import { TaskCard } from "@/entities/Task"
@@ -35,6 +35,8 @@ export const TaskList: FC<TaskListProps> = ({ columnId, addTask: AddTask, ...pro
 					tagList={
 						<TagList
 							tags={task.tags}
+							taskId={task.id}
+							tagRemove={RemoveTaskTag}
 							tagOptions={TagOptions}
 							className={styles.tagList}
 						/>

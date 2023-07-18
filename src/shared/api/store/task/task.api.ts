@@ -2,7 +2,7 @@ import { createApi } from "effector"
 
 import { uuid } from "@/shared/package/uuid"
 
-import { Task, TaskAddTag, TaskCreate, TaskUpdate } from "../../types"
+import { Task, TaskAddTag, TaskCreate, TaskRemoveTag, TaskUpdate } from "../../types"
 
 import { $tasks } from "./task.store"
 
@@ -36,6 +36,13 @@ export const $tasksApi = createApi($tasks, {
 	addTag(state, payload: TaskAddTag) {
 		return state.map(task =>
 			task.id === payload.id ? { ...task, tags: [...task.tags, payload.tag] } : task,
+		)
+	},
+	removeTag(state, { tagId, taskId }: TaskRemoveTag) {
+		return state.map(task =>
+			task.id === taskId
+				? { ...task, tags: task.tags.filter(tag => tag.id !== tagId) }
+				: task,
 		)
 	},
 })
