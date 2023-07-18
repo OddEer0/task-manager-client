@@ -1,16 +1,24 @@
 import { Menu, MenuList } from "@chakra-ui/react"
-import { render, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { fork } from "effector"
 import { Provider } from "effector-react"
 import { FC, PropsWithChildren } from "react"
 
-import { ChangeColorItem } from "@/features/TagAction/ui/TagOptions/ChangeColorItem.tsx"
+import { DeleteTagItem } from "@/features/TagAction/ui/TagOptions/DeleteTagItem.tsx"
 
 import { $tags, mockTags, mockTasks } from "@/shared/api"
 
-import { CHANGE_COLOR_FORM_BUTTON, CHANGE_COLOR_ITEM } from "../../lib"
+import {
+	CHANGE_COLOR_FORM_BUTTON,
+	CHANGE_COLOR_ITEM,
+	CHANGE_NAME_ITEM,
+	CONFIRM_DELETE_TEXT,
+	DELETE_TAG_ITEM,
+} from "../../lib"
 
+import { ChangeColorItem } from "./ChangeColorItem"
+import { ChangeNameItem } from "./ChangeNameItem"
 import { TagOptions } from "./index"
 
 const MenuComp: FC<PropsWithChildren> = ({ children }) => {
@@ -36,7 +44,7 @@ describe("TaskOption ChangeColorItem component testing", () => {
 		expect(screen.getByText(CHANGE_COLOR_FORM_BUTTON)).toBeInTheDocument()
 	})
 
-	it("Should form submit", async () => {
+	it("Should change color form submit", async () => {
 		const fn = jest.fn()
 		const scope = fork({
 			values: new Map([[$tags, mockTags]]),
@@ -56,5 +64,64 @@ describe("TaskOption ChangeColorItem component testing", () => {
 			bg: mockTags[0].bg,
 			color: mockTags[0].color,
 		})
+	})
+})
+
+describe("TaskOption ChangeNameItem testing", () => {
+	it("Should open modal with click item", async () => {
+		render(<TagOptions id={mockTags[0].id} />)
+		expect(screen.queryByRole("textbox")).not.toBeInTheDocument()
+		await userEvent.click(screen.getByText(CHANGE_NAME_ITEM))
+		expect(screen.queryByRole("textbox")).toBeInTheDocument()
+	})
+
+	it("Should change name form submit", async () => {
+		const fn = jest.fn()
+		const value = "issue"
+		const scope = fork({
+			values: new Map([[$tags, mockTags]]),
+		})
+		render(
+			<Provider value={scope}>
+				<MenuComp>
+					<ChangeNameItem id={mockTags[0].id} onDataSubmit={fn} />
+				</MenuComp>
+			</Provider>,
+		)
+		await userEvent.click(screen.getByText(CHANGE_NAME_ITEM))
+		fireEvent.change(screen.getByRole("textbox"), {
+			target: {
+				value,
+			},
+		})
+		await userEvent.type(screen.getByRole("textbox"), "{enter}")
+		expect(fn).toHaveBeenCalledTimes(1)
+		expect(fn).toHaveBeenCalledWith({ name: value })
+	})
+})
+
+describe("TaskOption DeleteTagItem component testing", () => {
+	it("Should open modal with item click", async () => {
+		render(<TagOptions id={mockTags[0].id} />)
+		expect(screen.queryByText(CONFIRM_DELETE_TEXT)).not.toBeInTheDocument()
+		await userEvent.click(screen.getByText(DELETE_TAG_ITEM))
+		expect(screen.queryByText(CONFIRM_DELETE_TEXT)).toBeInTheDocument()
+	})
+
+	it("Should delete tag", async () => {
+		const scope = fork({
+			values: new Map([[$tags, mockTags]]),
+		})
+		render(
+			<Provider value={scope}>
+				<MenuComp>
+					<DeleteTagItem id={mockTags[0].id} />
+				</MenuComp>
+			</Provider>,
+		)
+		expect(scope.getState($tags).length).toBe(2)
+		await userEvent.click(screen.getByText(DELETE_TAG_ITEM))
+		await userEvent.click(screen.getByText("Подтвердить"))
+		expect(scope.getState($tags).length).toBe(1)
 	})
 })
