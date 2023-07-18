@@ -5,9 +5,17 @@ import { fork } from "effector"
 import { Provider } from "effector-react"
 import { FC, PropsWithChildren } from "react"
 
+import { DeleteTagItem } from "@/features/TagAction/ui/TagOptions/DeleteTagItem.tsx"
+
 import { $tags, mockTags, mockTasks } from "@/shared/api"
 
-import { CHANGE_COLOR_FORM_BUTTON, CHANGE_COLOR_ITEM, CHANGE_NAME_ITEM } from "../../lib"
+import {
+	CHANGE_COLOR_FORM_BUTTON,
+	CHANGE_COLOR_ITEM,
+	CHANGE_NAME_ITEM,
+	CONFIRM_DELETE_TEXT,
+	DELETE_TAG_ITEM,
+} from "../../lib"
 
 import { ChangeColorItem } from "./ChangeColorItem"
 import { ChangeNameItem } from "./ChangeNameItem"
@@ -89,5 +97,31 @@ describe("TaskOption ChangeNameItem testing", () => {
 		await userEvent.type(screen.getByRole("textbox"), "{enter}")
 		expect(fn).toHaveBeenCalledTimes(1)
 		expect(fn).toHaveBeenCalledWith({ name: value })
+	})
+})
+
+describe("TaskOption DeleteTagItem component testing", () => {
+	it("Should open modal with item click", async () => {
+		render(<TagOptions id={mockTags[0].id} />)
+		expect(screen.queryByText(CONFIRM_DELETE_TEXT)).not.toBeInTheDocument()
+		await userEvent.click(screen.getByText(DELETE_TAG_ITEM))
+		expect(screen.queryByText(CONFIRM_DELETE_TEXT)).toBeInTheDocument()
+	})
+
+	it("Should delete tag", async () => {
+		const scope = fork({
+			values: new Map([[$tags, mockTags]]),
+		})
+		render(
+			<Provider value={scope}>
+				<MenuComp>
+					<DeleteTagItem id={mockTags[0].id} />
+				</MenuComp>
+			</Provider>,
+		)
+		expect(scope.getState($tags).length).toBe(2)
+		await userEvent.click(screen.getByText(DELETE_TAG_ITEM))
+		await userEvent.click(screen.getByText("Подтвердить"))
+		expect(scope.getState($tags).length).toBe(1)
 	})
 })

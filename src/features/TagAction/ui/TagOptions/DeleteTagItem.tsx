@@ -14,7 +14,7 @@ import { RiDeleteBin6Line } from "react-icons/ri"
 import { $tagsApi } from "@/shared/api"
 import { useDisclosure } from "@/shared/package/react-hooks"
 
-import { DELETE_TAG_ITEM } from "../../lib"
+import { CONFIRM_DELETE_TEXT, DELETE_TAG_ITEM } from "../../lib"
 
 import styles from "./styles.module.scss"
 
@@ -40,7 +40,7 @@ export const DeleteTagItem: FC<DeleteTagItemProps> = ({ id }) => {
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent className={styles.modal}>
-					<Text>Вы точно хотите удалить тег</Text>
+					<Text>{CONFIRM_DELETE_TEXT}</Text>
 					<ModalFooter className={styles.modalFooter}>
 						<Button onClick={onClose}>Отмена</Button>
 						<Button onClick={clickHandle}>Подтвердить</Button>
