@@ -1,17 +1,24 @@
-import { SystemStyleObject } from "@chakra-ui/react"
 import { FC } from "react"
 
 import { Tag } from "@/shared/api"
-import { Stack, StackProps, Tag as TagComp, TagLabel } from "@/shared/ui"
+import { Box, Stack, StackProps, Tag as TagComp, TagLabel } from "@/shared/ui"
 
 import styles from "./styles.module.scss"
 
 interface TagList extends StackProps {
 	tags: Tag[]
-	tagOptions: FC<{ id: string; className?: string; sx?: SystemStyleObject }>
+	taskId: string
+	tagOptions: FC<{ id: string }>
+	tagRemove: FC<{ tagId: string; taskId: string }>
 }
 
-export const TagList: FC<TagList> = ({ tags, tagOptions: TagOptions, ...props }) => {
+export const TagList: FC<TagList> = ({
+	tags,
+	taskId,
+	tagOptions: TagOptions,
+	tagRemove: TagRemove,
+	...props
+}) => {
 	return (
 		<Stack wrap="wrap" direction="row" {...props}>
 			{tags.map(tag => (
@@ -21,11 +28,13 @@ export const TagList: FC<TagList> = ({ tags, tagOptions: TagOptions, ...props })
 					sx={{ background: tag.bg, color: tag.color }}
 				>
 					<TagLabel>{tag.name}</TagLabel>
-					<TagOptions
-						id={tag.id}
+					<Box
 						className={styles.option}
 						sx={{ background: tag.bg, boxShadow: `0px 0px 5px ${tag.bg}` }}
-					/>
+					>
+						<TagOptions id={tag.id} />
+						<TagRemove tagId={tag.id} taskId={taskId} />
+					</Box>
 				</TagComp>
 			))}
 		</Stack>

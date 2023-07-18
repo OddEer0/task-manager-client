@@ -1,5 +1,6 @@
 .tag {
 	position: relative;
+	min-width: 55px !important;
 
 	&:hover .option {
 		opacity: 1;
@@ -11,4 +12,6 @@
 	right: 5px;
 	opacity: 0;
 	transition: all .3s ease-in-out;
+	@include flex;
+	gap: 5px;
 }
