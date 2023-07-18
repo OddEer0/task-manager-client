@@ -2,3 +2,47 @@
 	font-size: 22px;
 	cursor: pointer;
 }
+
+.check {
+	cursor: pointer;
+
+	&:hover .checkIcon {
+		background: var(--chakra-colors-gray-600);
+	}
+}
+
+.checkIcon {
+	border-radius: 7px;
+	font-size: 28px;
+	transition: all .3s ease-in-out;
+}
+
+.modal {
+	padding: 12px !important;
+	border-radius: 15px;
+}
+
+.errorMessage {
+	color: var(--chakra-colors-red-500) !important;
+}
+
+.deleteItem {
+	color: var(--chakra-colors-red-500) !important;
+}
+
+.formControl {
+	@include flex-col;
+}
+
+.colorForm {
+	@include flex-col;
+	gap: 20px;
+}
+
+.modalFooter {
+	gap: 15px;
+}
+
+.itemIcon {
+	margin-right: 15px;
+}

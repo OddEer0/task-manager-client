@@ -44,3 +44,17 @@ sample({
 	},
 	target: $tasks,
 })
+
+sample({
+	clock: $tagsApi.deleteTag,
+	source: $tasks,
+	fn: (state, deleteArg) => {
+		return state.map(task => {
+			if (task.tags.some(tag => tag.id === deleteArg)) {
+				return { ...task, tags: task.tags.filter(tag => tag.id !== deleteArg) }
+			}
+			return task
+		})
+	},
+	target: $tasks,
+})
