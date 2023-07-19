@@ -1,0 +1,16 @@
+@mixin text-no-wrap() {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+@mixin text-max-line($max: 3) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -moz-box;
+	display: -webkit-box;
+	line-clamp: $max;
+	-moz-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}

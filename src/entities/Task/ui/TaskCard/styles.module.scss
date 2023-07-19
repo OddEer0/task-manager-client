@@ -7,6 +7,10 @@
 	padding: 11px 14px 24px;
 }
 
+.title {
+	@include text-no-wrap;
+}
+
 .cardHeader {
 	padding: 0 !important;
 	@include flex(flex-end)
@@ -17,10 +21,13 @@
 }
 
 .footer {
-	margin-top: 10px;
+	margin-top: 20px;
 	padding: 0 !important;
+	@include flex(flex-end);
 }
 
 .description {
-	color: var(--chakra-colors-gray-600)
+	color: var(--chakra-colors-gray-600);
+	margin-bottom: 20px;
+	@include text-max-line(2);
 }
