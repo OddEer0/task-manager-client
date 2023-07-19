@@ -33,7 +33,9 @@ export const TaskCard: FC<TaskCardProps> = ({
 		<Card className={classes} {...props}>
 			<CardHeader className={styles.cardHeader}>{TaskOption}</CardHeader>
 			<CardBody className={styles.cardBody}>
-				<Text fontSize="xl">{name}</Text>
+				<Text className={styles.title} fontSize="xl">
+					{name}
+				</Text>
 				<Text className={styles.description} fontSize="xs">
 					{description || DESCRIPTION_TASK_PLACEHOLDER}
 				</Text>
