@@ -1,4 +1,11 @@
-import { Task, TaskAddTag, TaskCreate, TaskRemoveTag, TaskUpdate } from "@/shared/api"
+import {
+	Task,
+	TaskAddTag,
+	TaskChangePriority,
+	TaskCreate,
+	TaskRemoveTag,
+	TaskUpdate,
+} from "@/shared/api"
 
 import { mockTags } from "../tag"
 
@@ -35,4 +42,9 @@ export const mockTaskAddTag: TaskAddTag = {
 export const mockTaskRemoveTag: TaskRemoveTag = {
 	taskId: mockTasks[0].id,
 	tagId: mockTasks[0].tags[0].id,
+}
+
+export const mockTaskChangePriority: TaskChangePriority = {
+	priority: "low",
+	taskId: mockTasks[0].id,
 }

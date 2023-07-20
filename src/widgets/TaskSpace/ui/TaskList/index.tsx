@@ -6,6 +6,7 @@ import { AddTaskTag, RemoveTaskTag, TaskOption } from "@/features/TaskAction"
 
 import { TagList } from "@/entities/Tag"
 import { TaskCard } from "@/entities/Task"
+import { TaskPriority } from "@/entities/Task/ui/TaskPriority"
 
 import { $tasks, taskByColumnIdSelector } from "@/shared/api"
 import { Stack, StackProps } from "@/shared/ui"
@@ -32,6 +33,7 @@ export const TaskList: FC<TaskListProps> = ({ columnId, addTask: AddTask, ...pro
 					taskOption={<TaskOption id={task.id} />}
 					task={task}
 					key={task.id}
+					taskPriority={<TaskPriority taskId={task.id} priority={task.priority} />}
 					tagList={
 						<TagList
 							tags={task.tags}

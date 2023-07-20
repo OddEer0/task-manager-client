@@ -2,6 +2,7 @@ import { allSettled, fork } from "effector"
 
 import {
 	mockTaskAddTag,
+	mockTaskChangePriority,
 	mockTaskRemoveTag,
 	taskByColumnIdSelector,
 	taskByIdSelector,
@@ -81,6 +82,18 @@ describe("Task model testing", () => {
 			params: mockUpdateTask,
 		})
 		expect(scope.getState($tasks)[0].name).toBe(mockUpdateTask.task.name)
+	})
+
+	it("Should add priority", async () => {
+		const scope = fork({
+			values: new Map([[$tasks, mockTasks]]),
+		})
+		expect(scope.getState($tasks)[0].priority).toBeNull()
+		await allSettled($tasksApi.changePriority, {
+			scope,
+			params: mockTaskChangePriority,
+		})
+		expect(scope.getState($tasks)[0].priority).toBe("low")
 	})
 })
 

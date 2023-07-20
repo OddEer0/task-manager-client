@@ -5,7 +5,7 @@ import { Task } from "@/shared/api"
 import { classname } from "@/shared/package/classname"
 import { Card, CardBody, CardHeader, CardProps, Text } from "@/shared/ui"
 
-import { DESCRIPTION_TASK_PLACEHOLDER } from "../../lib.ts"
+import { DESCRIPTION_TASK_PLACEHOLDER } from "../../lib"
 
 import styles from "./styles.module.scss"
 
@@ -13,8 +13,8 @@ interface TaskCardProps extends CardProps {
 	task: Task
 	taskOption: ReactNode
 	addTag?: ReactNode
-	addPriority?: ReactNode
 	tagList?: ReactNode
+	taskPriority?: ReactNode
 }
 
 export const TaskCard: FC<TaskCardProps> = ({
@@ -22,8 +22,8 @@ export const TaskCard: FC<TaskCardProps> = ({
 	className,
 	task,
 	addTag,
-	addPriority,
 	tagList,
+	taskPriority,
 	...props
 }) => {
 	const classes = classname(styles.card, className)
@@ -43,7 +43,7 @@ export const TaskCard: FC<TaskCardProps> = ({
 			</CardBody>
 			<CardFooter className={styles.footer}>
 				{addTag}
-				{addPriority}
+				{taskPriority}
 			</CardFooter>
 		</Card>
 	)
