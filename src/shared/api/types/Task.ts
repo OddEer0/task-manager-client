@@ -28,3 +28,8 @@ export interface TaskRemoveTag {
 	taskId: string
 	tagId: string
 }
+
+export interface TaskChangePriority {
+	taskId: string
+	priority: PriorityVariant | null
+}

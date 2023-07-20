@@ -34,7 +34,7 @@ describe("TaskCard component testing", () => {
 			<TaskCard
 				task={mockTasks[0]}
 				taskOption={<p>task option</p>}
-				addPriority={<p>add priority</p>}
+				taskPriority={<p>add priority</p>}
 			/>,
 		)
 		expect(screen.getByText(/add priority/i)).toBeInTheDocument()

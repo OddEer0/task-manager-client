@@ -24,6 +24,7 @@
 	margin-top: 20px;
 	padding: 0 !important;
 	@include flex(flex-end);
+	gap: 15px;
 }
 
 .description {

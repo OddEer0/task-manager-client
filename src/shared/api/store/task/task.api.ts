@@ -2,7 +2,14 @@ import { createApi } from "effector"
 
 import { uuid } from "@/shared/package/uuid"
 
-import { Task, TaskAddTag, TaskCreate, TaskRemoveTag, TaskUpdate } from "../../types"
+import {
+	Task,
+	TaskAddTag,
+	TaskChangePriority,
+	TaskCreate,
+	TaskRemoveTag,
+	TaskUpdate,
+} from "../../types"
 
 import { $tasks } from "./task.store"
 
@@ -44,5 +51,8 @@ export const $tasksApi = createApi($tasks, {
 				? { ...task, tags: task.tags.filter(tag => tag.id !== tagId) }
 				: task,
 		)
+	},
+	changePriority(state, { priority, taskId }: TaskChangePriority) {
+		return state.map(task => (task.id === taskId ? { ...task, priority } : task))
 	},
 })

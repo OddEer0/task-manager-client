@@ -1,0 +1,13 @@
+.btn {
+	padding: 4px;
+	border-radius: 6px;
+	font-size: 20px;
+
+	&:hover {
+		background: var(--chakra-colors-bg-400);
+	}
+}
+
+.item {
+	margin-right: 10px;
+}
