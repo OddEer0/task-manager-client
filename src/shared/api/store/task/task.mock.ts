@@ -36,7 +36,7 @@ export const mockTasks: Task[] = [
 
 export const mockTaskAddTag: TaskAddTag = {
 	id: "task-first",
-	tag: mockTags[0],
+	tag: mockTags[1],
 }
 
 export const mockTaskRemoveTag: TaskRemoveTag = {
