@@ -1,0 +1,25 @@
+.rightElement {
+	gap: 2px;
+	width: 64px !important;
+}
+
+.icon {
+	font-size: 24px;
+	padding: 2px;
+	border-radius: 7px;
+
+	&:hover {
+		background: var(--chakra-colors-bg-500);
+	}
+}
+
+.offer {
+	padding: 5px 14px;
+	border-radius: 8px;
+	cursor: pointer;
+	display: inline-block;
+
+	&:hover {
+		background: var(--chakra-colors-bg-500);
+	}
+}

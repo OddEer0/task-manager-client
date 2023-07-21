@@ -7,7 +7,7 @@ import { $columns, mockColumns } from "@/shared/api"
 
 import { TaskColumnList } from "./index"
 
-const AddTaskFakeComponent: FC<{ id: string }> = ({ id }) => <p>{id}</p>
+const AddTaskFakeComponent: FC<{ columnId: string }> = ({ columnId }) => <p>{columnId}</p>
 
 describe("TaskColumnList component testing", () => {
 	const testId = "testId"
