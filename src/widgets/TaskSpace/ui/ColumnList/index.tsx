@@ -15,7 +15,7 @@ import styles from "./styles.module.scss"
 
 interface TaskColumnListProps extends HTMLAttributes<HTMLDivElement> {
 	id: string
-	addTask: FC<{ id: string }>
+	addTask: FC<{ columnId: string }>
 }
 
 export const TaskColumnList: FC<TaskColumnListProps> = ({
@@ -44,7 +44,7 @@ export const TaskColumnList: FC<TaskColumnListProps> = ({
 							<TaskCardList
 								className={styles.list}
 								columnId={col.id}
-								addTask={<AddTask id={col.id} />}
+								addTask={<AddTask columnId={col.id} />}
 							/>
 						</TaskColumn>
 					</Skeleton>
