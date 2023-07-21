@@ -14,7 +14,7 @@ import { CREATE_TAG_OFFER } from "../../lib"
 
 import styles from "./styles.module.scss"
 
-interface CreateTaskProps extends HTMLAttributes<HTMLDivElement> {
+export interface CreateTaskProps extends HTMLAttributes<HTMLDivElement> {
 	columnId: string
 	onDataSubmit?: (data: TaskCreate) => void
 }

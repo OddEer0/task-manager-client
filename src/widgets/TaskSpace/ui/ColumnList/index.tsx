@@ -2,6 +2,7 @@ import { useStoreMap } from "effector-react"
 import { FC, HTMLAttributes } from "react"
 
 import { DeleteColumn, EditColumn } from "@/features/ColumnAction"
+import { CreateTaskProps } from "@/features/TaskAction"
 
 import { TaskColumn } from "@/entities/Column"
 
@@ -15,7 +16,7 @@ import styles from "./styles.module.scss"
 
 interface TaskColumnListProps extends HTMLAttributes<HTMLDivElement> {
 	id: string
-	addTask: FC<{ columnId: string }>
+	addTask: FC<CreateTaskProps>
 }
 
 export const TaskColumnList: FC<TaskColumnListProps> = ({
@@ -44,7 +45,7 @@ export const TaskColumnList: FC<TaskColumnListProps> = ({
 							<TaskCardList
 								className={styles.list}
 								columnId={col.id}
-								addTask={<AddTask columnId={col.id} />}
+								addTask={<AddTask className={styles.createTask} columnId={col.id} />}
 							/>
 						</TaskColumn>
 					</Skeleton>
