@@ -41,9 +41,16 @@ export const $tasksApi = createApi($tasks, {
 		)
 	},
 	addTag(state, payload: TaskAddTag) {
-		return state.map(task =>
-			task.id === payload.id ? { ...task, tags: [...task.tags, payload.tag] } : task,
-		)
+		if (
+			!state.some(task =>
+				task.id === payload.id ? task.tags.some(tag => tag.id === payload.tag.id) : false,
+			)
+		) {
+			return state.map(task =>
+				task.id === payload.id ? { ...task, tags: [...task.tags, payload.tag] } : task,
+			)
+		}
+		return state
 	},
 	removeTag(state, { tagId, taskId }: TaskRemoveTag) {
 		return state.map(task =>
@@ -53,6 +60,15 @@ export const $tasksApi = createApi($tasks, {
 		)
 	},
 	changePriority(state, { priority, taskId }: TaskChangePriority) {
-		return state.map(task => (task.id === taskId ? { ...task, priority } : task))
+		if (
+			priority === null ||
+			priority === "extra" ||
+			priority === "low" ||
+			priority === "medium" ||
+			priority === "high"
+		) {
+			return state.map(task => (task.id === taskId ? { ...task, priority } : task))
+		}
+		return state
 	},
 })

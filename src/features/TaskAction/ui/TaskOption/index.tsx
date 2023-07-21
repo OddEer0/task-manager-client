@@ -12,8 +12,6 @@ interface TaskOptionProps {
 }
 
 export const TaskOption: FC<PropsWithChildren<TaskOptionProps>> = ({ id }) => {
-	console.log(id)
-
 	return (
 		<>
 			<Menu>
