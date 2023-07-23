@@ -5,9 +5,8 @@ import { FC } from "react"
 import { Controller, useForm } from "react-hook-form"
 
 import { $columns, $columnsApi, ColumnUpdate, columnByIdSelector } from "@/shared/api"
+import { FORM } from "@/shared/lib"
 import { Button, FormControl, FormLabel, Input } from "@/shared/ui"
-
-import { MIN_LENGTH_MESSAGE, REQUIRED_MESSAGE } from "../../lib.ts"
 
 import styles from "./styles.module.scss"
 
@@ -46,8 +45,9 @@ export const EditColumnForm: FC<EditColumnForm> = ({ id }) => {
 				<Input
 					isInvalid={!!errors.name}
 					{...register("name", {
-						minLength: { message: MIN_LENGTH_MESSAGE, value: 3 },
-						required: REQUIRED_MESSAGE,
+						minLength: FORM.minLength(3),
+						required: FORM.required,
+						maxLength: FORM.maxLength(20),
 					})}
 				/>
 				{errors.name && <FormHelperText>{errors.name.message}</FormHelperText>}
