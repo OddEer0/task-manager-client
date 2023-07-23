@@ -9,3 +9,13 @@
 		background: var(--chakra-colors-bg-200);
 	}
 }
+
+.form {
+	padding: 12px;
+	@include flex-col;
+	gap: 10px;
+}
+
+.picker {
+	margin: 12px !important;
+}

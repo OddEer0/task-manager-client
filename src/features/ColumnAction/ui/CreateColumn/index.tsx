@@ -1,4 +1,3 @@
-import { FormHelperText, useDisclosure } from "@chakra-ui/react"
 import ColorPicker from "@uiw/react-color-chrome"
 import { useEvent } from "effector-react"
 import { FC, PropsWithChildren } from "react"
@@ -7,10 +6,12 @@ import { Controller, useForm } from "react-hook-form"
 import { $columnsApi } from "@/shared/api"
 import { FORM } from "@/shared/lib"
 import { classname } from "@/shared/package/classname"
+import { useDisclosure } from "@/shared/package/react-hooks"
 import {
 	Button,
 	ButtonProps,
 	FormControl,
+	FormHelperText,
 	FormLabel,
 	Input,
 	Modal,
