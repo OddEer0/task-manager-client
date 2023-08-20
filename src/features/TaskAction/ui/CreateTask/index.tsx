@@ -31,15 +31,18 @@ export const CreateTask: FC<CreateTaskProps> = ({ columnId, onDataSubmit, ...pro
 	const {
 		register,
 		handleSubmit,
+		resetField,
 		formState: { errors },
 	} = useForm<TaskCreate>({
 		defaultValues: { columnId: columnId },
 	})
 	const { isOpen, onOpen, onClose } = useDisclosure()
-	const createTaskHandle = useEvent($tasksApi.addTask)
-	const ref = useOutsideClick(() => {
+	const closeHandle = () => {
 		onClose()
-	})
+		resetField("name")
+	}
+	const createTaskHandle = useEvent($tasksApi.addTask)
+	const ref = useOutsideClick(() => closeHandle())
 
 	const submitHandle = handleSubmit((data: TaskCreate) => {
 		createTaskHandle(data)
@@ -64,7 +67,7 @@ export const CreateTask: FC<CreateTaskProps> = ({ columnId, onDataSubmit, ...pro
 							<InputRightElement className={styles.rightElement}>
 								<button
 									type="button"
-									onClick={onClose}
+									onClick={closeHandle}
 									data-testid="create-task-close"
 									className={styles.icon}
 								>
