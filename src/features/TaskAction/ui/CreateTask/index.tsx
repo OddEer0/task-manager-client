@@ -1,16 +1,24 @@
-import { InputGroup, InputRightElement } from "@chakra-ui/react"
 import { useEvent } from "effector-react"
-import { FC, HTMLAttributes, useState } from "react"
+import { FC, HTMLAttributes } from "react"
 import { useForm } from "react-hook-form"
 import { BsCheckLg } from "react-icons/bs"
 import { IoMdClose } from "react-icons/io"
 
 import { $tasksApi } from "@/shared/api"
 import { TaskCreate } from "@/shared/api"
+import { FORM } from "@/shared/lib"
+import { useDisclosure } from "@/shared/package/react-hooks"
 import { useOutsideClick } from "@/shared/package/react-hooks"
-import { Input, Text } from "@/shared/ui"
+import {
+	FormControl,
+	FormHelperText,
+	Input,
+	InputGroup,
+	InputRightElement,
+	Text,
+} from "@/shared/ui"
 
-import { CREATE_TAG_OFFER } from "../../lib"
+import { CREATE_TAG_OFFER, CREATE_TASK_PLACEHOLDER } from "../../lib"
 
 import styles from "./styles.module.scss"
 
@@ -20,13 +28,17 @@ export interface CreateTaskProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const CreateTask: FC<CreateTaskProps> = ({ columnId, onDataSubmit, ...props }) => {
-	const { register, handleSubmit } = useForm<TaskCreate>({
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<TaskCreate>({
 		defaultValues: { columnId: columnId },
 	})
-	const [isShow, setIsShow] = useState(false)
+	const { isOpen, onOpen, onClose } = useDisclosure()
 	const createTaskHandle = useEvent($tasksApi.addTask)
 	const ref = useOutsideClick(() => {
-		setIsShow(false)
+		onClose()
 	})
 
 	const submitHandle = handleSubmit((data: TaskCreate) => {
@@ -36,27 +48,38 @@ export const CreateTask: FC<CreateTaskProps> = ({ columnId, onDataSubmit, ...pro
 
 	return (
 		<div {...props} ref={ref}>
-			{isShow ? (
+			{isOpen ? (
 				<form onSubmit={submitHandle} role="form">
-					<InputGroup>
-						<Input {...register("name")} />
-						<InputRightElement className={styles.rightElement}>
-							<button
-								type="button"
-								onClick={() => setIsShow(false)}
-								data-testid="create-task-close"
-								className={styles.icon}
-							>
-								<IoMdClose />
-							</button>
-							<button type="submit" role="submit" className={styles.icon}>
-								<BsCheckLg />
-							</button>
-						</InputRightElement>
-					</InputGroup>
+					<FormControl>
+						<InputGroup>
+							<Input
+								{...register("name", {
+									required: FORM.required,
+									minLength: FORM.minLength(4),
+									maxLength: FORM.maxLength(50),
+								})}
+								isInvalid={!!errors.name}
+								placeholder={CREATE_TASK_PLACEHOLDER}
+							/>
+							<InputRightElement className={styles.rightElement}>
+								<button
+									type="button"
+									onClick={onClose}
+									data-testid="create-task-close"
+									className={styles.icon}
+								>
+									<IoMdClose />
+								</button>
+								<button type="submit" role="submit" className={styles.icon}>
+									<BsCheckLg />
+								</button>
+							</InputRightElement>
+						</InputGroup>
+						{errors.name && <FormHelperText>{errors.name.message}</FormHelperText>}
+					</FormControl>
 				</form>
 			) : (
-				<Text fontSize="xl" className={styles.offer} onClick={() => setIsShow(true)}>
+				<Text fontSize="xl" className={styles.offer} onClick={onOpen}>
 					{CREATE_TAG_OFFER}
 				</Text>
 			)}

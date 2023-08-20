@@ -17,3 +17,13 @@
 .editItemModal {
 	padding: 12px;
 }
+
+.form {
+	@include flex-col;
+	gap: 20px;
+}
+
+.button {
+	margin-top: 10px;
+	width: 100%;
+}
