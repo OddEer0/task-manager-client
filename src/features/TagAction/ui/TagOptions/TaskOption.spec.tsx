@@ -1,13 +1,11 @@
-import { Menu, MenuList } from "@chakra-ui/react"
 import { fireEvent, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { fork } from "effector"
 import { Provider } from "effector-react"
 import { FC, PropsWithChildren } from "react"
 
-import { DeleteTagItem } from "@/features/TagAction/ui/TagOptions/DeleteTagItem.tsx"
-
 import { $tags, mockTags, mockTasks } from "@/shared/api"
+import { Menu, MenuList } from "@/shared/ui"
 
 import {
 	CHANGE_COLOR_FORM_BUTTON,
@@ -19,6 +17,7 @@ import {
 
 import { ChangeColorItem } from "./ChangeColorItem"
 import { ChangeNameItem } from "./ChangeNameItem"
+import { DeleteTagItem } from "./DeleteTagItem"
 import { TagOptions } from "./index"
 
 const MenuComp: FC<PropsWithChildren> = ({ children }) => {
@@ -54,7 +53,6 @@ describe("TaskOption ChangeColorItem component testing", () => {
 				<MenuComp>
 					<ChangeColorItem id={mockTags[0].id} onDataSubmit={fn} />
 				</MenuComp>
-				,
 			</Provider>,
 		)
 		await userEvent.click(screen.getByText(CHANGE_COLOR_ITEM))

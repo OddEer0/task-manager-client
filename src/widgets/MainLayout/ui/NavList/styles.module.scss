@@ -10,7 +10,7 @@
 	padding: 6px;
 	border-radius: 12px;
 	@include flex(flex-start);
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		background: var(--chakra-colors-bg-200);

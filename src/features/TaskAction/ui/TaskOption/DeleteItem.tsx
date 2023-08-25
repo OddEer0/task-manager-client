@@ -1,7 +1,9 @@
+import { useEvent } from "effector-react"
 import { FC, useRef } from "react"
 import { RiDeleteBin6Line } from "react-icons/ri"
 
 import { $tasksApi } from "@/shared/api"
+import { MODAL_CONFIRM_CANCEL, MODAL_CONFIRM_OK } from "@/shared/lib"
 import { useDisclosure } from "@/shared/package/react-hooks"
 import {
 	AlertDialog,
@@ -13,6 +15,8 @@ import {
 	MenuItem,
 } from "@/shared/ui"
 
+import { TASK_DELETE_QUESTION, TASK_OPTION_DELETE_ITEM } from "../../lib.ts"
+
 import styles from "./styles.module.scss"
 
 interface DeleteItemProps {
@@ -21,28 +25,25 @@ interface DeleteItemProps {
 
 export const DeleteItem: FC<DeleteItemProps> = ({ id }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+	const deleteTaskHandle = useEvent($tasksApi.deleteTask)
 	const cancelRef = useRef(null)
 
 	const deleteHandle = () => {
-		$tasksApi.deleteTask(id)
+		deleteTaskHandle(id)
 	}
 
 	return (
 		<>
-			<MenuItem
-				className={styles.deleteItem}
-				icon={<RiDeleteBin6Line />}
-				onClick={onOpen}
-			>
-				Удалить
+			<MenuItem className={styles.deleteItem} onClick={onOpen}>
+				<RiDeleteBin6Line className={styles.itemIcon} /> {TASK_OPTION_DELETE_ITEM}
 			</MenuItem>
 			<AlertDialog isOpen={isOpen} leastDestructiveRef={cancelRef} onClose={onClose}>
 				<AlertDialogOverlay>
 					<AlertDialogContent>
-						<AlertDialogHeader>Вы точно хотите удалить задачу?</AlertDialogHeader>
-						<AlertDialogFooter>
-							<Button onClick={onClose}>Закрыть</Button>
-							<Button onClick={deleteHandle}>Подтвердить</Button>
+						<AlertDialogHeader>{TASK_DELETE_QUESTION}</AlertDialogHeader>
+						<AlertDialogFooter gap="15px">
+							<Button onClick={onClose}>{MODAL_CONFIRM_CANCEL}</Button>
+							<Button onClick={deleteHandle}>{MODAL_CONFIRM_OK}</Button>
 						</AlertDialogFooter>
 					</AlertDialogContent>
 				</AlertDialogOverlay>

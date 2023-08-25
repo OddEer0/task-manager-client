@@ -1,18 +1,7 @@
 .list {
 	margin-top: 25px;
-
-	&:hover .createTask {
-		opacity: 1;
-		visibility: visible;
-	}
 }
 
 .wrapper {
 	margin-top: 15px;
-}
-
-.createTask {
-	transition: all .2s ease-in-out;
-	opacity: 0;
-	visibility: hidden;
 }

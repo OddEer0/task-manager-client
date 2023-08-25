@@ -13,7 +13,7 @@
 
 .cardHeader {
 	padding: 0 !important;
-	@include flex(flex-end)
+	@include flex(flex-end);
 }
 
 .cardBody {

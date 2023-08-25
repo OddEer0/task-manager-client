@@ -6,13 +6,16 @@ import { Provider } from "effector-react"
 import { CreateTask } from "@/features/TaskAction"
 
 import { $tasks, mockColumns, mockTasks } from "@/shared/api"
+import { FORM } from "@/shared/lib"
 
-import { CREATE_TAG_OFFER } from "../../lib"
+import { CREATE_TAG_OFFER, CREATE_TASK_PLACEHOLDER } from "../../lib"
 
 describe("CreateTask component testing", () => {
 	const testId = "create-task-testId"
 	const testClassName = "test-class-name"
 	const closeBtnTestId = "create-task-close"
+	const valueGreatest50 =
+		"dsaaaaaaaadsadsadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 	it("Should render component", () => {
 		render(<CreateTask columnId={mockColumns[0].id} />)
@@ -73,11 +76,14 @@ describe("CreateTask component testing", () => {
 	})
 
 	it("Should form submit", async () => {
+		const value = "new task"
 		const fn = jest.fn()
 		expect(true).toBe(true)
 		render(<CreateTask columnId={mockColumns[0].id} onDataSubmit={fn} />)
 		await userEvent.click(screen.getByText(CREATE_TAG_OFFER))
-		await userEvent.type(screen.getByRole("textbox"), "{enter}")
+		const input = screen.getByRole("textbox")
+		await userEvent.type(input, value)
+		await userEvent.type(input, "{enter}")
 		expect(fn).toHaveBeenCalledTimes(1)
 		await userEvent.click(screen.getByRole("submit"))
 		expect(fn).toHaveBeenCalledTimes(2)
@@ -99,5 +105,23 @@ describe("CreateTask component testing", () => {
 		await userEvent.type(input, value)
 		await userEvent.click(screen.getByRole("submit"))
 		expect(scope.getState($tasks).length).toBe(mockTasks.length + 1)
+	})
+
+	it("Should error max length 50, min length 4, required", async () => {
+		const minValueError = FORM.minLength(4).message
+		const maxValueError = FORM.maxLength(50).message
+		render(<CreateTask columnId={mockColumns[0].id} />)
+		await userEvent.click(screen.getByText(CREATE_TAG_OFFER))
+		expect(screen.getByPlaceholderText(CREATE_TASK_PLACEHOLDER)).toBeInTheDocument()
+		const input = screen.getByRole("textbox")
+		await userEvent.type(input, "abs")
+		await userEvent.click(screen.getByRole("submit"))
+		expect(screen.getByText(minValueError)).toBeInTheDocument()
+		await userEvent.type(input, valueGreatest50)
+		await userEvent.click(screen.getByRole("submit"))
+		expect(screen.getByText(maxValueError)).toBeInTheDocument()
+		await userEvent.clear(input)
+		await userEvent.click(screen.getByRole("submit"))
+		expect(screen.getByText(FORM.required)).toBeInTheDocument()
 	})
 })
