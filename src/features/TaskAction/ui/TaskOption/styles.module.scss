@@ -3,7 +3,7 @@
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 16px;
-	transition: background .3s ease-in-out;
+	transition: background 0.3s ease-in-out;
 
 	&:hover {
 		background: var(--chakra-colors-bg-400);
