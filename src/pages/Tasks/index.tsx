@@ -1,6 +1,6 @@
 import { FC } from "react"
 
-import { CreateProject, EditProjectIcon } from "@/features/ProjectAction"
+import { CreateProject, ProjectOption } from "@/features/ProjectAction"
 
 import { ProjectCardList } from "@/entities/Project"
 
@@ -15,7 +15,7 @@ export const TasksPage: FC = () => {
 				<CreateProject>Создать проект</CreateProject>
 			</section>
 			<section className={classname(styles.section, styles.second)}>
-				<ProjectCardList edit={EditProjectIcon} />
+				<ProjectCardList edit={ProjectOption} />
 			</section>
 		</>
 	)

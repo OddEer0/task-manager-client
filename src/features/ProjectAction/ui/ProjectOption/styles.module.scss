@@ -1,0 +1,18 @@
+.button {
+	padding: 4px;
+	border-radius: 7px;
+
+	&:hover {
+		background: var(--chakra-colors-bg-100);
+	}
+}
+
+.form {
+	padding: 12px;
+	@include flex-col;
+	gap: 10px;
+}
+
+.picker {
+	margin: 12px !important;
+}
