@@ -2,6 +2,7 @@ import { Menu, MenuButton, MenuList } from "@chakra-ui/react"
 import { FC } from "react"
 import { SlOptionsVertical } from "react-icons/sl"
 
+import { DeleteProjectItem } from "./DeleteProjectItem"
 import { EditProjectItem } from "./EditProjectItem"
 import styles from "./styles.module.scss"
 
@@ -17,6 +18,7 @@ export const ProjectOption: FC<ProjectOptionProps> = ({ id }) => {
 			</MenuButton>
 			<MenuList>
 				<EditProjectItem id={id} />
+				<DeleteProjectItem id={id} />
 			</MenuList>
 		</Menu>
 	)
