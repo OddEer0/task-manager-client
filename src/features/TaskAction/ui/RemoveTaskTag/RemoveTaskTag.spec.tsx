@@ -26,4 +26,13 @@ describe("RemoveTaskTag component testing", () => {
 		await userEvent.click(screen.getByTitle("удалить тег из задачи"))
 		expect(scope.getState($tasks)[0].tags.length).toBe(0)
 	})
+
+	it("Should onRemove event working", async () => {
+		const fn = jest.fn()
+		render(
+			<RemoveTaskTag tagId={mockTags[0].id} taskId={mockTasks[0].id} onRemove={fn} />,
+		)
+		await userEvent.click(screen.getByTitle("удалить тег из задачи"))
+		expect(fn).toHaveBeenCalled()
+	})
 })

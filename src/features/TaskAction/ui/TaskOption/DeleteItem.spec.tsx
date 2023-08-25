@@ -57,4 +57,16 @@ describe("TaskOption DeleteItem component testing", () => {
 		await userEvent.click(screen.getByText(MODAL_CONFIRM_OK))
 		expect(scope.getState($tasks).length).toBe(mockTasks.length - 1)
 	})
+
+	it("Should onDelete event working", async () => {
+		const fn = jest.fn()
+		render(
+			<MenuComp>
+				<DeleteItem id={mockTasks[0].id} onDelete={fn} />
+			</MenuComp>,
+		)
+		await userEvent.click(screen.getByText(TASK_OPTION_DELETE_ITEM))
+		await userEvent.click(screen.getByText(MODAL_CONFIRM_OK))
+		expect(fn).toHaveBeenCalled()
+	})
 })

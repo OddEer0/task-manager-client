@@ -41,8 +41,8 @@ export const ChangeColorItem: FC<ChangeColorItemProps> = ({ onDataSubmit, id }) 
 
 	const submitHandle = handleSubmit((data: TagUpdate["tag"]) => {
 		$tagsApi.updateTag({ id, tag: data })
-		onDataSubmit?.call(null, data)
 		onClose()
+		onDataSubmit?.call(null, data)
 	})
 
 	return (

@@ -50,6 +50,7 @@ export const CreateColumn: FC<PropsWithChildren<CreateColumnProps>> = ({
 
 	const submitHandle = handleSubmit((data: ICreateColumnForm) => {
 		createHandle({ ...data, projectId })
+		onClose()
 		onDataSubmit && onDataSubmit.call(null, data)
 	})
 

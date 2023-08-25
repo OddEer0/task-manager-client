@@ -30,9 +30,10 @@ import styles from "./styles.module.scss"
 
 interface EditItemProps {
 	id: string
+	onEditData?: (data: TaskUpdate["task"]) => void
 }
 
-export const EditItem: FC<EditItemProps> = ({ id }) => {
+export const EditItem: FC<EditItemProps> = ({ id, onEditData }) => {
 	const { onOpen, onClose, isOpen } = useDisclosure()
 	const updateTaskHandle = useEvent($tasksApi.updateTask)
 	const { name, description, priority } =
@@ -56,6 +57,7 @@ export const EditItem: FC<EditItemProps> = ({ id }) => {
 	const submitHandle = handleSubmit((data: TaskUpdate["task"]) => {
 		updateTaskHandle({ id, task: data })
 		onClose()
+		onEditData?.call(null, data)
 	})
 
 	return (
