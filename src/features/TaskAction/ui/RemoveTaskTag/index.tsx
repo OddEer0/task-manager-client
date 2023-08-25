@@ -11,16 +11,21 @@ import styles from "./styles.module.scss"
 interface RemoveTaskTagProps extends IconBaseProps {
 	tagId: string
 	taskId: string
+	onRemove?: () => void
 }
 
 export const RemoveTaskTag: FC<RemoveTaskTagProps> = ({
 	taskId,
 	tagId,
+	onRemove,
 	className,
 	...props
 }) => {
 	const removeEvent = useEvent($tasksApi.removeTag)
-	const removeHandle = () => removeEvent({ tagId, taskId })
+	const removeHandle = () => {
+		removeEvent({ tagId, taskId })
+		onRemove && onRemove()
+	}
 
 	return (
 		<IoMdClose

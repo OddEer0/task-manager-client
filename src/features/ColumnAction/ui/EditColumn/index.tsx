@@ -56,6 +56,7 @@ export const EditColumn: FC<EditColumnProps> = ({
 
 	const submitHandle = handleSubmit(data => {
 		update({ id, column: data })
+		onClose()
 		onDataSubmit?.call(null, data)
 	})
 

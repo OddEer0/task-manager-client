@@ -21,15 +21,17 @@ import styles from "./styles.module.scss"
 
 interface DeleteItemProps {
 	id: string
+	onDelete?: () => void
 }
 
-export const DeleteItem: FC<DeleteItemProps> = ({ id }) => {
+export const DeleteItem: FC<DeleteItemProps> = ({ id, onDelete }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const deleteTaskHandle = useEvent($tasksApi.deleteTask)
 	const cancelRef = useRef(null)
 
 	const deleteHandle = () => {
 		deleteTaskHandle(id)
+		onDelete && onDelete()
 	}
 
 	return (
