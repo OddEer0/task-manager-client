@@ -53,7 +53,6 @@ describe("TaskOption ChangeColorItem component testing", () => {
 				<MenuComp>
 					<ChangeColorItem id={mockTags[0].id} onDataSubmit={fn} />
 				</MenuComp>
-				,
 			</Provider>,
 		)
 		await userEvent.click(screen.getByText(CHANGE_COLOR_ITEM))
