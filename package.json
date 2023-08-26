@@ -12,7 +12,7 @@
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage",
 		"stylelint": "stylelint src/**/*{.css,.scss}",
-		"stylelint:fix": "stylelint src/**/*{.css,.scss,.ts,.tsx,.js,.jsx} --fix",
+		"stylelint:fix": "stylelint src/**/*{.css,.scss} --fix",
 		"prettier": "prettier --check src/**/*{.css,.scss,.ts,.tsx,.js,.jsx}",
 		"prettier:fix": "prettier --write src/**/*{.css,.scss,.ts,.tsx,.js,.jsx}",
 		"preview": "vite preview",

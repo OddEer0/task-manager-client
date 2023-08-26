@@ -1,3 +1,7 @@
 export const CREATE_PROJECT_NAME = "Название проекта"
 export const CREATE_PROJECT_SUBMIT = "Создать"
+export const EDIT_PROJECT_SUBMIT = "Подтвердить"
 export const CREATE_PROJECT_NAME_PLACEHOLDER = "Название проекта"
+export const EDIT_PROJECT_ITEM = "Редактировать"
+export const DELETE_PROJECT_ITEM = "Удалить"
+export const PROJECT_DELETE_QUESTION = "Вы точно хотите удалить данный проект?"
