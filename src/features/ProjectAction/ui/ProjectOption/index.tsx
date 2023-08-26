@@ -1,4 +1,4 @@
-import { Menu, MenuButton, MenuList } from "@chakra-ui/react"
+import { Menu, MenuButton, MenuList, Portal } from "@chakra-ui/react"
 import { FC } from "react"
 import { SlOptionsVertical } from "react-icons/sl"
 
@@ -16,10 +16,12 @@ export const ProjectOption: FC<ProjectOptionProps> = ({ id }) => {
 			<MenuButton className={styles.button}>
 				<SlOptionsVertical />
 			</MenuButton>
-			<MenuList>
-				<EditProjectItem id={id} />
-				<DeleteProjectItem id={id} />
-			</MenuList>
+			<Portal>
+				<MenuList>
+					<EditProjectItem id={id} />
+					<DeleteProjectItem id={id} />
+				</MenuList>
+			</Portal>
 		</Menu>
 	)
 }
