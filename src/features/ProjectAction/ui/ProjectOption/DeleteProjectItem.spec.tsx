@@ -6,6 +6,8 @@ import { FC, PropsWithChildren } from "react"
 
 import { $projects, mockProjects } from "@/shared/api"
 import { MODAL_CONFIRM_OK } from "@/shared/lib"
+import { ConfirmProvider } from "@/shared/package/react-confirm"
+import { renderWithConfirm } from "@/shared/test"
 import { Menu, MenuList } from "@/shared/ui"
 
 import { DELETE_PROJECT_ITEM, PROJECT_DELETE_QUESTION } from "../../lib"
@@ -31,7 +33,7 @@ describe("ProjectOption DeleteProjectItem component testing", () => {
 	})
 
 	it("Should open modal with click item", async () => {
-		render(
+		renderWithConfirm(
 			<MenuComp>
 				<DeleteProjectItem id={mockProjects[0].id} />
 			</MenuComp>,
@@ -43,7 +45,7 @@ describe("ProjectOption DeleteProjectItem component testing", () => {
 
 	it("Should onDelete event working", async () => {
 		const fn = jest.fn()
-		render(
+		renderWithConfirm(
 			<MenuComp>
 				<DeleteProjectItem id={mockProjects[0].id} onDelete={fn} />
 			</MenuComp>,
@@ -57,11 +59,14 @@ describe("ProjectOption DeleteProjectItem component testing", () => {
 		const scope = fork({
 			values: new Map([[$projects, mockProjects]]),
 		})
+		const fn = jest.fn()
 		render(
 			<Provider value={scope}>
-				<MenuComp>
-					<DeleteProjectItem id={mockProjects[0].id} />
-				</MenuComp>
+				<ConfirmProvider>
+					<MenuComp>
+						<DeleteProjectItem id={mockProjects[0].id} onDelete={fn} />
+					</MenuComp>
+				</ConfirmProvider>
 			</Provider>,
 		)
 		expect(scope.getState($projects).length).toBe(mockProjects.length)
