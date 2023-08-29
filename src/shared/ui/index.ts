@@ -71,6 +71,7 @@ export {
 	TagLabel,
 	TagLeftIcon,
 	TagRightIcon,
+	Portal,
 	type ButtonProps,
 	type StackProps,
 	type CardProps,
