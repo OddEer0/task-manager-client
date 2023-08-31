@@ -6,6 +6,7 @@ import { FC, PropsWithChildren } from "react"
 
 import { $tasks, mockTasks } from "@/shared/api"
 import { MODAL_CONFIRM_OK } from "@/shared/lib"
+import { renderWithConfirm } from "@/shared/test"
 import { Menu, MenuList } from "@/shared/ui"
 
 import { TASK_DELETE_QUESTION, TASK_OPTION_DELETE_ITEM } from "../../lib"
@@ -31,7 +32,7 @@ describe("TaskOption DeleteItem component testing", () => {
 	})
 
 	it("Should open confirm modal with click", async () => {
-		render(
+		renderWithConfirm(
 			<MenuComp>
 				<DeleteItem id={mockTasks[0].id} />
 			</MenuComp>,
@@ -45,7 +46,7 @@ describe("TaskOption DeleteItem component testing", () => {
 		const scope = fork({
 			values: new Map([[$tasks, mockTasks]]),
 		})
-		render(
+		renderWithConfirm(
 			<Provider value={scope}>
 				<MenuComp>
 					<DeleteItem id={mockTasks[0].id} />
@@ -60,7 +61,7 @@ describe("TaskOption DeleteItem component testing", () => {
 
 	it("Should onDelete event working", async () => {
 		const fn = jest.fn()
-		render(
+		renderWithConfirm(
 			<MenuComp>
 				<DeleteItem id={mockTasks[0].id} onDelete={fn} />
 			</MenuComp>,

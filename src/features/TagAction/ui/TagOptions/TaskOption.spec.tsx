@@ -5,6 +5,7 @@ import { Provider } from "effector-react"
 import { FC, PropsWithChildren } from "react"
 
 import { $tags, mockTags, mockTasks } from "@/shared/api"
+import { renderWithConfirm } from "@/shared/test"
 import { Menu, MenuList } from "@/shared/ui"
 
 import {
@@ -100,7 +101,7 @@ describe("TaskOption ChangeNameItem testing", () => {
 
 describe("TaskOption DeleteTagItem component testing", () => {
 	it("Should open modal with item click", async () => {
-		render(<TagOptions id={mockTags[0].id} />)
+		renderWithConfirm(<TagOptions id={mockTags[0].id} />)
 		expect(screen.queryByText(CONFIRM_DELETE_TEXT)).not.toBeInTheDocument()
 		await userEvent.click(screen.getByText(DELETE_TAG_ITEM))
 		expect(screen.queryByText(CONFIRM_DELETE_TEXT)).toBeInTheDocument()
@@ -110,7 +111,7 @@ describe("TaskOption DeleteTagItem component testing", () => {
 		const scope = fork({
 			values: new Map([[$tags, mockTags]]),
 		})
-		render(
+		renderWithConfirm(
 			<Provider value={scope}>
 				<MenuComp>
 					<DeleteTagItem id={mockTags[0].id} />
@@ -125,7 +126,7 @@ describe("TaskOption DeleteTagItem component testing", () => {
 
 	it("Should onDelete event working", async () => {
 		const fn = jest.fn()
-		render(
+		renderWithConfirm(
 			<MenuComp>
 				<DeleteTagItem id={mockTags[0].id} onDelete={fn} />
 			</MenuComp>,
